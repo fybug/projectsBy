@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="这是一个作用于 webpack 的快速开发手脚架。将 webpack 的配置拆解并提供更加直观的方法去使用它。">
+    <meta name="keywords" content="webpack, PDWebpack, fybug, web, html, blog">
+    <title>PDWebpack</title>
+</head>
+<body>
+
+<!-- 顶栏 -->
+<header class="shadow"><!--
+    &lt;!&ndash; 移动设备顶栏 &ndash;&gt;
+    <div id="mobile_menu" class="hide-for-large">
+        &lt;!&ndash; 顶栏 &ndash;&gt;
+        <div class="title-bar">
+            &lt;!&ndash;<div class="title-bar-left">&ndash;&gt;
+            &lt;!&ndash; 菜单按钮 &ndash;&gt;
+            <button class="menu-icon" type="button" data-toggle="mobile_menu_list"></button>
+            <h4 class="title-bar-title margin-bottom-0" style="margin-left:.5rem">fybug`s log</h4>
+            &lt;!&ndash;</div>&ndash;&gt;
+        </div>
+
+        &lt;!&ndash; 菜单部分 &ndash;&gt;
+        <aside class="off-canvas position-left" id="mobile_menu_list" data-off-canvas>
+            &lt;!&ndash; 菜单列表 &ndash;&gt;
+            <ul class="vertical menu">
+                &lt;!&ndash; 标题 &ndash;&gt;
+                <ti>
+                    &lt;!&ndash; 关闭按钮 &ndash;&gt;
+                    <button class="padding-top-1 padding-left-1 close-button position-static"
+                            aria-label="Close menu"
+                            type="button" data-close>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="margin-0">fybug`s log</h4>
+                </ti>
+
+                &lt;!&ndash; todo link &ndash;&gt;
+                <li><a class="padding-1">blog</a></li>
+                <li><a class="padding-1">dev list</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    &lt;!&ndash; pc 端顶栏 &ndash;&gt;
+    <div id="pc_menu" class="grid-container padding-vertical-0 top-bar show-for-large">
+        &lt;!&ndash; 图标 &ndash;&gt;
+        <div class="top-bar-left padding-horizontal-1"><h4 class="margin-0 font-bold font-wide">
+            fybug`s
+            log</h4></div>
+
+        &lt;!&ndash; 菜单 &ndash;&gt;
+        <div class="top-bar-right">
+            <ul class="horizontal menu">
+                &lt;!&ndash; todo link &ndash;&gt;
+                <li><a class="padding-horizontal-2">blog</a></li>
+                <li><a class="padding-horizontal-2">dev list</a></li>
+            </ul>
+        </div>
+    </div>-->
+</header>
+
+<!-- 内容部分 -->
+<section class="grid-y grid-padding-x off-canvas-content" data-off-canvas-content>
+    <!-- 标题区 -->
+    <tit class="cell align-center grid-container">
+        <div class="grid-x text-center padding-vertical-2 padding-horizontal-2">
+            <!-- 上部边距 -->
+            <div class="cell full show-for-medium margin-top-2"></div>
+            <div class="cell full show-for-small-only margin-top-1"></div>
+
+            <!-- 标题 -->
+            <div class="cell large-6 small-12">
+                <h2 class="cell font-bold font-wide">PDWebpack</h2>
+                <!-- 简介 -->
+                <h5 class="margin-vertical-1 cell">这是一个作用于 webpack 的快速开发手脚架。将 webpack
+                    的配置拆解并提供更加直观的方法去使用它。</h5>
+            </div>
+
+            <!-- 按钮 -->
+            <div class="cell grid-x large-6 small-12 margin-top-1 align-center">
+                <div class="cell small-12 medium-5 grid-y align-center">
+                    <a class="button radius cell padding-vertical-1" target="_blank"
+                       href="https://gitee.com/PatternDirClean/PDWebpack"
+                       style="background-color: #f24343;"><h4 class="margin-bottom-0">gitee</h4></a>
+                </div>
+                <div class="medium-1 show-for-medium"></div>
+                <div class="cell grid-y small-12 medium-5 align-center">
+                    <a class="button radius cell padding-vertical-1" target="_blank"
+                       href="https://github.com/PatternDirClean/PDWebpack">
+                        <h4 class="margin-0">github</h4></a>
+                </div>
+            </div>
+        </div>
+        <hr/>
+    </tit>
+
+    <!-- 功能介绍区 -->
+    <section class="cell align-center grid-x grid-container margin-bottom-2">
+        <section class="cell medium-6 large-4 small-12">
+            <h3 class="font-bold text-center">快速使用的手脚架</h3>
+            <p>直接 clone master 分支即可使用。内置示例项目，位于 test 文件夹。</p>
+            <p>这是一个快速开发框架，或许你会觉得它不好用，因为它是设计用于开发其他基于 webpack 的手脚架时提供功能和结构支持。</p>
+            <div class="padding-vertical-1"></div>
+        </section>
+        <section class="cell medium-6 large-4 small-12">
+            <h3 class="font-bold text-center">更简洁的 webpack 使用</h3>
+            <p>拆解庞大复杂的 webpack 配置文件到多个文件中，以原配置项名称命名，使用 IDE 的文件搜索功能更快捷的找到需要修改的配置。</p>
+            <p>使用自制的配置加载模块，在 run.js 中使用函数化的方式添加模块和页面，并在参数中将其连接起来。</p>
+            <div class="padding-vertical-1"></div>
+        </section>
+        <section class="cell medium-6 large-4 small-12">
+            <h3 class="font-bold text-center">被整合的插件</h3>
+            <p class="font-bold">整合 HtmlWebpackPlugin 插件。</p>
+            <div class="padding-horizontal-1">
+                <p>不再需要在插件中引入页面并手动连接所有模块。标记为公共模块的模块会自动加载到所有的页面中，可通过页面加载模块中传入页面的附加配置参数取消。</p>
+            </div>
+            <p class="font-bold">整合 ScriptExtHtmlWebpackPlugin 插件。</p>
+            <div class="padding-horizontal-1">
+                <p>不在需要单独声明模块加载方式。在 js 模块加载模块中传入加载方式参数即可</p>
+            </div>
+            <p class="font-bold">整合 MiniCssExtractPlugin 插件。</p>
+        </section>
+    </section>
+</section>
+
+<footer class="grid-x text-center align-center">
+    <h5 class="cell small-12 margin-bottom-1"><u><a
+            href="https://github.com/fybug">github</a></u> / <u><a
+            href="https://gitee.com/fybug">gitee</a></u> @ fybug</h5>
+    <p class="cell small-12 margin-0">code of the 2020</p>
+</footer>
+
+</body>
+</html>
