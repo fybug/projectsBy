@@ -1,12 +1,43 @@
 body > section {
+    > tit {
+        color: white;
+        background: linear-gradient(to top, #0099FF, #0984ff);
+
+        > div {
+            max-width: 40rem !important;
+            margin: auto;
+
+            .button {
+                background-color: rgba(255, 255, 255, 0.04);
+                border: 1px #ffffff solid;
+
+                &:hover {
+                    background: transparent;
+                    border: #fff 1px solid;
+                }
+            }
+        }
+    }
+
     > section {
-        > h3 {
+        margin: auto;
+        max-width: 50rem;
+
+        h3 {
+            font-weight: bold;
             color: #494949;
         }
 
         > section {
-            padding: 0 1rem;
             min-height: 22vh !important;
+            padding: 0 1rem 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px dashed #b5b5b5;
+
+            &:last-child {
+                border: none;
+                margin-bottom: auto;
+            }
 
             p {
                 color: #757575;
