@@ -11,7 +11,7 @@ global.RootPath = path.resolve(__dirname, '../../') + '/';
  * @author fybug
  * @since PDWebpack 0.0.1
  */
-global.OutPath = RootPath + 'build/';
+global.OutPath = RootPath + 'build/fybug/';
 
 /** 页面输出路径 */
 global.PageOutPath = OutPath;

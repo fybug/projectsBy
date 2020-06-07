@@ -6,9 +6,14 @@ html {
 /* 顶栏 */
 body {
     > header {
-        &, & * {
-            background-color: white !important;
-            color: black;
+        --headerback: transparent;
+        --headertextcolor: black;
+        --asidetextcolor: black;
+
+        color: var(--headertextcolor);
+
+        * {
+            background-color: var(--headerback) !important;
         }
 
         /* 移动端顶栏 */
@@ -20,8 +25,8 @@ body {
 
             .menu-icon {
                 &::after {
-                    background: black;
-                    box-shadow: 0 7px 0 black, 0 14px 0 black;
+                    background: var(--headertextcolor);
+                    box-shadow: 0 7px 0 var(--headertextcolor), 0 14px 0 var(--headertextcolor);
                 }
 
                 &:hover::after {
@@ -31,28 +36,34 @@ body {
                 }
             }
 
-            aside > ul {
-                /* 菜单标题 */
+            aside {
+                background-color: white !important;
+                color: var(--asidetextcolor) !important;
 
-                > ti > h4 {
-                    border-bottom: 2px solid #6b6b6b;
-                    padding: .6rem 1rem;
-                }
+                > ul {
 
-                /* 菜单选项 */
+                    /* 菜单标题 */
 
-                > li {
-                    margin: 0 1.5rem;
-
-                    a {
-                        border-bottom: 2px solid transparent;
-                        transition: .5s;
-                        color: #9b9b9b;
-                        font-size: large !important;
+                    > ti > h4 {
+                        border-bottom: 2px solid #6b6b6b;
+                        padding: .6rem 1rem;
                     }
 
-                    a:hover {
-                        border-bottom: 2px solid #9b9b9b;
+                    /* 菜单选项 */
+
+                    > li {
+                        margin: 0 1.5rem;
+
+                        a {
+                            border-bottom: 2px solid transparent;
+                            transition: .5s;
+                            color: #9b9b9b;
+                            font-size: large !important;
+                        }
+
+                        a:hover {
+                            border-bottom: 2px solid #9b9b9b;
+                        }
                     }
                 }
             }
@@ -64,7 +75,7 @@ body {
             .top-bar-right > ul > li {
                 > a {
                     font-weight: bold;
-                    color: #828282;
+                    color: var(--headertextcolor);
                     transition: .5s;
                     padding-top: 1.4rem;
                     padding-bottom: 1.4rem;
@@ -83,15 +94,10 @@ body {
                     }
                 }
 
-                > a:hover {
-                    color: #717171;
-                    background: #e6e6e6 !important;
-
-                    &::after {
-                        left: -1rem;
-                        width: calc(100% + 2rem);
-                        background: #3f3f3f;
-                    }
+                > a:hover::after {
+                    left: -1rem;
+                    width: calc(100% + 2rem);
+                    background: var(--headertextcolor);
                 }
             }
         }

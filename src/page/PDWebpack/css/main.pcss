@@ -1,47 +1,99 @@
-body > section {
-    > tit {
-        color: white;
-        background: linear-gradient(to top, #0099FF, #0984ff);
-
-        > div {
-            max-width: 40rem !important;
-            margin: auto;
-
-            .button {
-                background-color: rgba(255, 255, 255, 0.04);
-                border: 1px #ffffff solid;
-
-                &:hover {
-                    background: transparent;
-                    border: #fff 1px solid;
-                }
-            }
-        }
+body {
+    > header {
+        background: linear-gradient(to right, #7F7FD5, #86A8E7, #7dd6d0) !important;
+        --headertextcolor: #fff;
+        --asidetextcolor: black;
     }
 
     > section {
-        margin: auto;
-        max-width: 50rem;
+        p {
+            color: #6f6f6f;
+        }
 
-        h3 {
-            font-weight: bold;
-            color: #494949;
+        > * {
+            @media print, screen and (min-width: 64em) {
+                height: 100vh !important;
+            }
+        }
+
+        > tit {
+            @media print, screen and (max-width: 63.99em) {
+                height: calc(100vh - 3rem) !important;
+            }
+            @media print, screen and (min-width: 64em) {
+                height: calc(100vh - 4rem) !important;
+            }
+
+            background: linear-gradient(to right, #7F7FD5, #86A8E7, #7DD6D0) !important;
+            color: white;
+
+            > div {
+                max-width: 40rem !important;
+                margin: auto;
+
+                .button {
+                    background-color: rgba(255, 255, 255, 0.04);
+                    border: 1px #ffffff solid;
+
+                    &:hover {
+                        background: transparent;
+                        border: #fff 1px solid;
+                    }
+                }
+            }
+        }
+
+        > #haoload {
+            background: linear-gradient(to bottom, #fc7e98, #8ea3fb);
+
+            * {
+                color: #fff;
+            }
+
+            code {
+                color: #6e6e6e;
+                background-color: rgba(255, 243, 244, 0.91);
+                border-radius: 5px;
+            }
+
+            @media print, screen and (min-width: 64em) {
+                > * {
+                    max-width: 35rem;
+                }
+
+                & > div:first-child {
+                    padding-right: 1.2rem;
+                    padding-left: 1rem;
+                }
+
+                & > div:last-child {
+                    padding-left: 1.2rem;
+                    padding-right: 1rem;
+                }
+            }
+            @media print, screen and (max-width: 63.99em) {
+                padding: 2rem 0;
+                & > div {
+                    padding: 0 2rem;
+                }
+            }
         }
 
         > section {
-            min-height: 22vh !important;
-            padding: 0 1rem 1rem;
-            margin-bottom: 2rem;
-            border-bottom: 2px dashed #b5b5b5;
+            margin: auto;
 
-            &:last-child {
-                border: none;
-                margin-bottom: auto;
-            }
+            > section {
+                min-height: 22vh !important;
+                margin: auto auto 2rem;
 
-            p {
-                color: #757575;
+                &:last-child {
+                    margin-bottom: auto;
+                }
             }
+        }
+
+        > .users {
+            max-width: 53rem;
         }
     }
 }
