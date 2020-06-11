@@ -67,4 +67,4 @@ $(() => {
     document.body.appendChild(a);
     a.innerHTML = "$(document).foundation();";
 });
-window.menudata = [/*{link: "#", name: "blog"}*/];
+window.menudata = [{link: "#", name: "blog"}];
