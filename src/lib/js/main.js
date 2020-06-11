@@ -60,10 +60,11 @@ $(() => {
         "        </div>\n" +
         "    </div>";
 
-    /* foundation 初始化 */
+});
+/* foundation 初始化 */
+$(() => {
     let a = document.createElement("script");
     document.body.appendChild(a);
     a.innerHTML = "$(document).foundation();";
 });
-
-window.menudata = [{link: "#", name: "blog"}];
+window.menudata = [/*{link: "#", name: "blog"}*/];

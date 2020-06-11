@@ -43,17 +43,18 @@ body {
             }
         }
 
-        > #haoload {
-            background: linear-gradient(to bottom, #fc7e98, #8ea3fb);
-
+        .loads {
             * {
                 color: #fff;
             }
 
             code {
                 color: #6e6e6e;
-                background-color: rgba(255, 243, 244, 0.91);
                 border-radius: 5px;
+            }
+
+            blockquote {
+                border-left-color: white;
             }
 
             @media print, screen and (min-width: 64em) {
@@ -76,6 +77,41 @@ body {
                 & > div {
                     padding: 0 2rem;
                 }
+            }
+        }
+
+        > #haoload {
+            background: linear-gradient(to bottom, #fc7e98, #8ea3fb);
+
+            code {
+                background-color: rgba(255, 243, 244, 0.91);
+            }
+        }
+
+        > #modeload {
+            background: linear-gradient(to bottom, #66bafb, #32c632);
+
+            code {
+                background-color: rgba(251, 255, 255, 0.91);
+            }
+        }
+
+        > #frameconf {
+            background: linear-gradient(to bottom, #59d97b, #fff);
+
+            * {
+                color: #313131;
+            }
+
+            code {
+                color: #dedede;
+                border-color: #0f0f0f;
+                background-color: rgb(32, 32, 32);
+            }
+
+            blockquote {
+                border-left-color: #383838;
+                background-color: rgba(0, 0, 0, 0.09);
             }
         }
 
