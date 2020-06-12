@@ -1,7 +1,7 @@
 {
-  "name": "fybug",
+  "name": "fybug_projects",
   "version": "0.0.1",
-  "description": "fybug debug blog`s",
+  "description": "fybug`s projects",
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --hot -w --config webpack.dev.js",
@@ -42,9 +42,6 @@
     "what-input": "^5.2.10"
   },
   "main": "postcss.config.js",
-  "keywords": [
-    "Webpack",
-    "web"
-  ],
+  "keywords": [],
   "dependencies": {}
 }

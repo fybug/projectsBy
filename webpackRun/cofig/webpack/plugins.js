@@ -4,7 +4,6 @@
  */
 module.exports = (confget, conf) => [
     new webpack.ProvidePlugin({
-        $: "jquery",
         jQuery: "jquery"
     }),
     // 清理输出
