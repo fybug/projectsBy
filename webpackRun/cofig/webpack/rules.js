@@ -41,13 +41,10 @@ module.exports = (confget, conf) => [
         use: [{
             loader: 'image-webpack-loader',
             options: {
-                progressive: true,
-                optimizationLevel: 7,
-                interlaced: false,
                 // jpeg / jpg
-                mozjpoeg: {quality: 70},
+                mozjpoeg: {quality: 70, progressive: true,},
                 // png
-                pngquant: {quality: "65-90", speed: 4},
+                pngquant: {optimizationLevel: 7, quality: "65-90", speed: 4},
                 // gif
                 gifsicle: {interlaced: false},
                 // webp
@@ -67,18 +64,13 @@ module.exports = (confget, conf) => [
     {
         test: /\.(ttf|eot|woff.?|otf)$/,
         use: {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
                 limit: 8192,
                 name: confget.GetOutName('font', './static/textstyle/[name].[ext]'),
                 publicPath: confget.GetUrlOf('font')
             }
         }
-    },
-    // 序列化的数据
-    {
-        test: /\.(json|txt|xml)$/,
-        loader: 'file-loader',
     },
     // html
     {

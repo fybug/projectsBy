@@ -13,5 +13,7 @@ module.exports = (confget, conf) => [
     // css 文件抽离插件
     new MiniCssExtractPlugin({
         filename: confget.GetOutName('css', 'style/[id][name][chunkhash:8].css'),
-    })
+    }),
+    // 博客数据生成插件
+    new (require("../../lib/aout.blogs"))()
 ];
