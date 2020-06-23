@@ -12,17 +12,17 @@ class Aout_Blogs {
      * @type number
      */
     static itemnum = 5;
-    /** 标签展示量
-     *
-     * @type number
-     */
-    static tagnum = 5;
     /** 展示在数据中的字段 */
     static showfield = {page: true, index: true};
 
+    /**
+     * @param {{
+     * itemnum:number,
+     * showfield:{page:boolean,index:boolean}
+     * }} option
+     */
     constructor(option = {}) {
         option.itemnum && (Aout_Blogs.itemnum = option.itemnum);
-        option.tagnum && (Aout_Blogs.tagnum = option.tagnum);
         option.showfield && (Aout_Blogs.showfield = Object.assign(Aout_Blogs.showfield, option.showfield));
     }
 
@@ -70,36 +70,36 @@ class Aout_Blogs {
      * @param {string} pagename 所属页面名称
      */
     static __load_tag(compilation, pagename, tags) {
-        let tagset = {
-            __listdata: []
-        };
-        let tag, taglist, tagitem, tagindex;
+        let tagset = [];
+        let tag, taglist, tagindex;
 
         /* 整理当前标签数据 */
         for (let tagsKey in tags) {
             tag = tags[tagsKey];
             // 记录标签
-            if (!tagset[tagsKey] && tagset.__listdata.length < Aout_Blogs.tagnum) {
-                tagset.__listdata.push(tagsKey);
-                tagset[tagsKey] = "";
-            }
+            tagset.push(tagsKey);
 
+            delete tags[tagsKey];
             // 标签页面数据集
-            taglist = tags[tagsKey] = [[]];
-            // 当前标签页面数据
-            tagitem = taglist[0];
+            taglist = [[]];
             // 当前数据集的位置
             tagindex = 0;
             /* 按页面整理数据 */
             tag.forEach(v => {
                 // 页面内容满了之后偏移数据集的位置
-                taglist[tagindex].length >= Aout_Blogs.itemnum && (tagitem = taglist[++tagindex] = []);
-                tagitem.push(v);
+                taglist[tagindex].length >= Aout_Blogs.itemnum && (taglist[++tagindex] = []);
+                taglist[tagindex].push(v);
             });
             tagindex = undefined;
+
+            // 页数文件
+            compilation.assets['static/blogs/' + pagename + '/tag_' + tagsKey + ".js"] = {
+                source: () => `[${taglist.length}]`,
+                size: () => (`[${taglist.length}]`).length,
+            };
             /* 生成标签页面数据 */
             taglist.forEach((v, index) => {
-                tagitem = JSON.stringify(v);
+                let tagitem = JSON.stringify(v);
                 compilation.assets['static/blogs/' + pagename + '/tag_' + index + "_" + tagsKey + ".js"] = {
                     source: () => tagitem,
                     size: () => tagitem.length
@@ -109,7 +109,7 @@ class Aout_Blogs {
 
         /* 生成 tag 展示索引 */
         {
-            tagset = JSON.stringify(tagset.__listdata);
+            tagset = JSON.stringify(tagset);
             compilation.assets['static/blogs/' + pagename + '/tags.js'] = {
                 source: () => tagset,
                 size: () => tagset.length
@@ -155,7 +155,6 @@ class Aout_Blogs {
                         // 生成头数据
                         nowdataindex = Aout_Blogs.__load_header(markd, datalist, nowdataindex);
 
-                        // todo 归档文件
                         // 生成内容文件
                         Aout_Blogs.__load_cont(v, d, index, compilation);
                     });
@@ -164,7 +163,9 @@ class Aout_Blogs {
                 Aout_Blogs.__load_tag(compilation, v, tags);
 
                 /* 生成索引数据集 */
+                let indexnum = 0;
                 datalist.forEach((item, index) => {
+                    ++indexnum;
                     // 当前索引
                     let data = JSON.stringify(item);
                     // 插入索引数据
@@ -173,6 +174,13 @@ class Aout_Blogs {
                         size: () => data.length
                     };
                 });
+
+                /* 生成数量索引 */
+                d = '[' + indexnum + ']';
+                compilation.assets['static/blogs/' + v + '/indexlist.js'] = {
+                    source: () => d,
+                    size: () => d.length
+                };
             }
             callback();
         });

@@ -10,7 +10,7 @@ body {
         --headertextcolor: black;
         --asidetextcolor: black;
 
-        color: var(--headertextcolor);
+        color: var(--headertextcolor) !important;
 
         * {
             background-color: var(--headerback) !important;
@@ -21,12 +21,16 @@ body {
         #mobile_menu {
             padding: .5rem;
 
+            > div > h4 {
+                color: var(--headertextcolor) !important;
+            }
+
             /* 移动菜单按钮 */
 
             .menu-icon {
                 &::after {
-                    background: var(--headertextcolor);
-                    box-shadow: 0 7px 0 var(--headertextcolor), 0 14px 0 var(--headertextcolor);
+                    background: var(--headertextcolor) !important;
+                    box-shadow: 0 7px 0 var(--headertextcolor), 0 14px 0 var(--headertextcolor) !important;
                 }
 
                 &:hover::after {
@@ -123,7 +127,65 @@ body {
     }
 }
 
+.pagination {
+    margin: auto;
+
+    li {
+        display: inline-block !important;
+        margin: auto;
+    }
+}
+
 blockquote {
     border-left-width: 2px;
     background-color: rgba(255, 255, 255, 0.23);
+}
+
+.flutitle {
+    @media print, screen and (max-width: 63.99em) {
+        height: calc(100vh - 3.6rem) !important;
+    }
+    @media print, screen and (min-width: 64em) {
+        height: calc(100vh - 4rem) !important;
+    }
+}
+
+.showload {
+    --lasttime: 0s;
+    @keyframes showload {
+        from {
+            opacity: 0;
+            transform: translate(0, 1rem);
+        }
+        to {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+    animation: showload .5s calc(var(--lasttime) + .5s) both;
+}
+
+.leftload {
+    overflow: hidden;
+    @keyframes leftload {
+        from {
+            opacity: 0;
+            margin-left: -100%;
+            margin-right: 100%;
+        }
+        to {
+            opacity: 1;
+            margin-left: unset;
+            margin-right: unset;
+        }
+    }
+
+    > * {
+        --lasttime: 0s;
+        animation: leftload .5s calc(var(--lasttime) + .5s) backwards;
+    }
+
+    > hr {
+        animation: leftload 1s calc(var(--lasttime) + .5s) backwards;
+    }
 }

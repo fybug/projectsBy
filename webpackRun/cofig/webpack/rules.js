@@ -55,6 +55,7 @@ module.exports = (confget, conf) => [
             options: {
                 // 小于 8k 全部压缩
                 limit: 8192,
+                esModule: false,
                 name: confget.GetOutName('img', 'static/pic/[name].[ext]'),
                 publicPath: confget.GetUrlOf('img')
             }
@@ -64,9 +65,10 @@ module.exports = (confget, conf) => [
     {
         test: /\.(ttf|eot|woff.?|otf)$/,
         use: {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
                 limit: 8192,
+                esModule: false,
                 name: confget.GetOutName('font', './static/textstyle/[name].[ext]'),
                 publicPath: confget.GetUrlOf('font')
             }
