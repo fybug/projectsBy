@@ -60,7 +60,6 @@ $(() => {
         </div>`;
 });
 
-// todo 提取工具
 /* foundation 初始化 */
 $(() => {
     let a = document.createElement("script");
