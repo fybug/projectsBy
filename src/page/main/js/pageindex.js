@@ -1,47 +1,49 @@
-/** 生成符合当前状态的分页
+/** 分页生成回调
  *
- * @param {number} index 当前检查的页码
- * @param {number} now 当前页面
+ * @param {Aout_blog} Aout_blog 博客数据对象
  * @param {string} link 附加参数
+ *
+ * @return {function}
  */
-window.checkpageinde = (index, now, link) => {
-    let html = '<li class="cell shrink';
-    if (index === now) html += ` current">${index + 1}</li>`;
-    else html += `"><a href="?${link}p=${index}">${index + 1}</a></li>`;
-    return html;
+window.plushpagedata = (Aout_blog, link = '') => {
+    return (index, isac) => {
+        let html = '<li class="cell shrink';
+        if (isac) html += ` current">${index + 1}</li>`;
+        else html += `"><a href="?${link}p=${index}">${index + 1}</a></li>`;
+
+        Aout_blog.data('root').children[0].innerHTML += html;
+    };
 };
 
-/** 填充分页
+/** 分页边缘生成回调
  *
- * @param {number} index 当前位置
- * @param {number} maxnum 最大页数
- * @param {Element} root 父节点
- * @param {string} link 连接参数
+ * @param {Aout_blog} Aout_blog 博客数据对象
+ * @param {string} link 附加参数
+ *
+ * @return {function}
  */
-window.plushpagelist = (index, maxnum, root, link = '') => {
-    let html = '';
+window.plushpageedge = (Aout_blog, link = '') => {
+    return (index, after, maxnum, pagenum) => {
+        let html = '';
 
-    /* 生成当前 */
-    // 向前快速索引
-    if (index > 2) {
-        html += checkpageinde(0, index, link);
-        if (index > 3)
-            html += `<li class="ellipsis" aria-hidden="true"></li>`;
-    }
+        // 向前快速索引
+        if (!after) {
+            if (index > pagenum && maxnum > pagenum * 2 + 1) {
+                html += `<li class="cell shrink"><a href="?${link}p=0">1</a></li>`;
+                if (index > pagenum + 1)
+                    html += `<li class="ellipsis" aria-hidden="true"></li>`;
 
-    for (let i = Math.max(0, index - 2 - Math.max(0, index - maxnum + 3)); i <= index; ++i) {
-        html += checkpageinde(i, index, link);
-    }
-    for (let i = index + 1, len = Math.min(i + 2 + Math.max(0, 2 - index), maxnum); i < len; ++i) {
-        html += checkpageinde(i, index, link);
-    }
+                Aout_blog.data('root').children[0].innerHTML += html;
+            }
+        } else {
+            // 向后快速索引
+            if (index < maxnum - pagenum - 1 && maxnum > pagenum * 2 + 1) {
+                if (index < maxnum - pagenum - 2)
+                    html += `<li class="ellipsis" aria-hidden="true"></li>`;
+                html += `<li class="cell shrink"><a href="?${link}p=${maxnum - 1}">${maxnum}</a></li>`;
 
-    // 向前快速索引
-    if (index < maxnum - 3) {
-        if (index < maxnum - 4)
-            html += `<li class="ellipsis" aria-hidden="true"></li>`;
-        html += checkpageinde(maxnum - 1, index, link);
-    }
-
-    root.children[0].innerHTML = html;
+                Aout_blog.data('root').children[0].innerHTML += html;
+            }
+        }
+    };
 };
