@@ -9,3 +9,5 @@ global.ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin'); /
 global.MiniCssExtractPlugin = require('mini-css-extract-plugin'); // 单独提取 css
 global.glob = require('globby'); // 文件匹配
 global.marked = require("marked"); // markdown 解析
+
+global.aout_blog = require("../lib/aout.blogs");

@@ -1,3 +1,18 @@
+/**
+ * @param {string[]} data
+ * @param {function(string,string,string)} fun
+ */
+function passlabel(data, fun) {
+    data.forEach(v => {
+        v = v.trim();
+        v = v.split(':');
+        if (v.length === 0) return;
+        if (v.length === 1) fun("", v[0].trim(), "");
+        if (v.length === 2) fun(v[0].trim(), v[1].trim(), '');
+        if (v.length === 3) fun(v[0].trim(), v[1].trim(), v[2].trim());
+    });
+}
+
 /** 填充数据
  *
  * @param {Aout_blog} Aout_blog 博客数据对象
@@ -12,7 +27,7 @@ window.plushcont = (Aout_blog) => {
 
         setTimeout(() => {
             html = `
-            <section class="grid-y shadow" onclick="window.open('${data.link}','_blank')">
+            <section class="grid-y shadow">
                 <div class="cell"><h3 class="h3 margin-bottom-0">${data.title}</h3></div>`;
             // 插入日期
             if (data.date) {
@@ -22,6 +37,18 @@ window.plushcont = (Aout_blog) => {
                         <small><b>${data.date}</b></small>
                     </p>
                 </div>`;
+            }
+            // 插入标签
+            if (data.label) {
+                html += '<div class="cell">'
+                passlabel(data.label.split(","), (clas, val, color) => {
+                    html += `<label class="`;
+                    if (clas !== '') html += `${clas} `;
+                    html += `label radius"`;
+                    if (color !== '') html += `style="background-color: ${color}"`;
+                    html += `>${val}</label> `;
+                });
+                html += '</div>';
             }
             // 插入图标
             if (data.icon) {

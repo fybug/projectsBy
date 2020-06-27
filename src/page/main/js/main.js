@@ -1,5 +1,5 @@
 require("../css/main.pcss");
-require('./aout.blog/index');
+require('./aout.blog/aout.blog_sdk');
 
 let Aout_blog = new window.Aout_blog('main');
 

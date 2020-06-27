@@ -15,5 +15,5 @@ module.exports = (confget, conf) => [
         filename: confget.GetOutName('css', 'style/[id][name][chunkhash:8].css'),
     }),
     // 博客数据生成插件
-    new (require("../../lib/aout.blogs"))({itemnum: 2})
+    new aout_blog({itemnum: 5})
 ];

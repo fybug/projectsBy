@@ -6,7 +6,7 @@ let tool = require('./tool');
  * @version 0.0.1
  * @class Aout_Blogs
  */
-class Aout_Blogs {
+let Aout_Blogs = class Aout_Blogs {
     /** 单页内容量
      *
      * @type number
@@ -185,6 +185,6 @@ class Aout_Blogs {
             callback();
         });
     }
-}
+};
 
 module.exports = Aout_Blogs;
