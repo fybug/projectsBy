@@ -9,55 +9,7 @@
 <body>
 
 <!-- 顶栏 -->
-<header><!--
-    &lt;!&ndash; 移动设备顶栏 &ndash;&gt;
-    <div id="mobile_menu" class="hide-for-large">
-        &lt;!&ndash; 顶栏 &ndash;&gt;
-        <div class="title-bar">
-            &lt;!&ndash;<div class="title-bar-left">&ndash;&gt;
-            &lt;!&ndash; 菜单按钮 &ndash;&gt;
-            <button class="menu-icon" type="button" data-toggle="mobile_menu_list"></button>
-            <h4 class="title-bar-title margin-bottom-0" style="margin-left:.5rem">fybug`s log</h4>
-            &lt;!&ndash;</div>&ndash;&gt;
-        </div>
-
-        &lt;!&ndash; 菜单部分 &ndash;&gt;
-        <aside class="off-canvas position-left" id="mobile_menu_list" data-off-canvas>
-            &lt;!&ndash; 菜单列表 &ndash;&gt;
-            <ul class="vertical menu">
-                &lt;!&ndash; 标题 &ndash;&gt;
-                <ti>
-                    &lt;!&ndash; 关闭按钮 &ndash;&gt;
-                    <button class="padding-top-1 padding-left-1 close-button position-static"
-                            aria-label="Close menu"
-                            type="button" data-close>
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="margin-0">fybug`s log</h4>
-                </ti>
-
-                <li><a class="padding-1">blog</a></li>
-                <li><a class="padding-1">dev list</a></li>
-            </ul>
-        </aside>
-    </div>
-
-    &lt;!&ndash; pc 端顶栏 &ndash;&gt;
-    <div id="pc_menu" class="grid-container padding-vertical-0 top-bar show-for-large">
-        &lt;!&ndash; 图标 &ndash;&gt;
-        <div class="top-bar-left padding-horizontal-1"><h4 class="margin-0 font-bold font-wide">
-            fybug`s
-            log</h4></div>
-
-        &lt;!&ndash; 菜单 &ndash;&gt;
-        <div class="top-bar-right">
-            <ul class="horizontal menu">
-                <li><a class="padding-horizontal-2">blog</a></li>
-                <li><a class="padding-horizontal-2">dev list</a></li>
-            </ul>
-        </div>
-    </div>-->
-</header>
+<header></header>
 
 <!-- 内容部分 -->
 <section class="grid-y grid-padding-x off-canvas-content" data-off-canvas-content>
@@ -198,16 +150,11 @@ confload.<span style="color: darkgoldenrod">runOf</span>(<span
         </div>
     </section>
 
+    <!-- 使用方法 -->
     <section class="cell grid-y align-center padding-vertical-2 users padding-horizontal-2">
         <h3>使用</h3>
-        <p>安装 Node.js 作为 webpack 的运行环境</p>
-        <p>运行以下命令安装 webpack
-            <code class="code-block"><span style="color: crimson">npm</span>
-                <span style="color:#ff4b00;">install</span> <span style="color: #9500dc">webpack
-                        webpack-cli webpack-dev-server</span>
-                <span style="color:#ff4b00;">-g</span></code>
-        </p>
-        <p>前往 github/gitee 发行版下载源码包或直接 clone 主分支的源码作为项目使用即可</p>
+        <blockquote>安装 Node.js 作为 webpack 的运行环境</blockquote>
+        <b>前往 github/gitee 发行版下载源码包或直接 clone 主分支的源码作为项目使用即可</b>
         <p>在项目文件夹下运行
             <code class="code-block"><span style="color: crimson">npm</span> <span
                     style="color:#ff4b00;">-y init</span><br/>
@@ -215,6 +162,7 @@ confload.<span style="color: darkgoldenrod">runOf</span>(<span
             初始化项目配置并安装依赖即可开始使用
         </p>
     </section>
+
 </section>
 
 <footer class="grid-y text-center align-center">
