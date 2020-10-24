@@ -43,17 +43,18 @@ global.Conf = {
         urlOf: '../',
         outName: 'static/textstyle/[name].[ext]'
     },
-    // // 图片输出配置
-    // imgOut: {
-    //     urlOf: './',
-    //     outName: 'static/pic/[name].[ext]'
-    // },
+    // 图片输出配置
+    imgOut: {
+        urlOf: "/projectsBy/build/fybug/",
+        outName: 'static/pic/[name].[ext]'
+    },
 
     /** 开发者模式下的专属配置 */
     devtool: {
         /** 测试状态模块输出名称 */
-        jsOut: {outName: '[name][hash:9][id].js'},
-        cssOut: {outName: '[name][hash:9][id].css'},
+        jsOut: {outName: 'script/[name][hash:9][id].js'},
+        cssOut: {outName: 'style/[name][hash:9][id].css'},
+        imgOut: {urlOf: "/"},
 
         /** 测试服务器端口
          *
