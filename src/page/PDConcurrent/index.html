@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="轻量级，高可靠，基于接口代码插入和 java 原生并发管理实现的 java 并发管理工具">
+    <meta name="description" content="轻量级，高可靠，基于接口代码插入和 java 原生并发管理实现的 java 并发工具">
     <meta name="keywords" content="java, PDConcurrent, fybug, java lib, concurrent">
     <title>PDConcurrent</title>
 </head>
@@ -14,15 +14,14 @@
 <!-- 内容部分 -->
 <section class="grid-y grid-padding-x off-canvas-content" data-off-canvas-content>
     <!-- 标题区 -->
-    <tit class="cell grid-y align-center">
+    <tit class="shadow cell grid-y align-center">
         <div class="cell grid-x text-center padding-vertical-2 padding-horizontal-2">
             <!-- 标题 -->
             <div class="cell">
 
                 <h1 class="cell font-bold font-wide">PDConcurrent</h1>
                 <!-- 简介 -->
-                <h6 class="margin-vertical-1 cell">轻量级，高可靠，基于接口代码插入和 java 原生并发管理实现的 java
-                    并发管理工具。</h6>
+                <h6 class="margin-vertical-1 cell">轻量级，高可靠，基于接口代码插入和 java 原生并发管理实现的 java 并发工具。</h6>
             </div>
 
             <!-- 按钮 -->
@@ -39,44 +38,41 @@
         </div>
     </tit>
 
-    <!-- 快速装载介绍 -->
-    <section class="cell grid-x align-center loads" id="haoload">
-        <div class="cell grid-x small-12 large-6 align-center">
-            <div class="cell show-for-medium small-2 grid-y align-center">
-                <h2 class="font-bold"><i class="fa-2x fa fa-download"></i></h2>
+    <!-- 特性介绍 -->
+    <section class="cell grid-x align-center grid-container padding-vertical-3" id="characteristic">
+        <div class="cell large-3 medium-6 padding-1 align-top">
+            <div class="grid-x">
+                <i class="fa fa-cube large-12 medium-shrink small-12"></i>
+                <p class="large-12 medium-auto small-12">轻量级</p>
             </div>
-            <div class="cell medium-10 small-12 grid-y align-center">
-                <h2 class="font-bold"><i
-                        class="fa-2x fa fa-download hide-for-medium margin-right-1"></i>简易装载</h2>
-                <p>使用内置的加载模块代替直接输入配置。整合多个常用模块提供完整的原生体验。更易使用，且具有更高的可读性。</p>
-            </div>
+            <p>仅不足 100kb 的 .jar 包。</p>
         </div>
-        <div class="cell small-12 large-6 grid-y align-center">
-            <h4><b>> ></b> 原生 webpack</h4>
-            <pre><code class="code-block width-100">entry: {
-    app:<span style="color: #ff4b00">"main.js"</span>,
-    index:<span style="color: #ff4b00">"index.js"</span>
-},
-plugins: [
-    <span style="color: #0050ff">new</span> ScriptExtHtmlWebpackPlugin({defer: [<span
-                        style="color: #ff4b00">'main'</span>, <span
-                        style="color: #ff4b00">'index'</span>]}, HtmlWebpackPlugin)
-]</code></pre>
-            <h4><b>> ></b> 函数化加载</h4>
-            <pre><code class="code-block width-100">confload.<span
-                    style="color: darkgoldenrod">runOf</span>(<span
-                    style="color: #ff4b00">"ModeLoad"</span>, (mode) => {
-    mode.<span style="color: darkgoldenrod">addMode</span>(<span style="color: #ff4b00">"app"</span>, <span
-                        style="color: #ff4b00">"main.js"</span>, <span style="color: #ff4b00">"defer"</span>);
-    mode.<span style="color: darkgoldenrod">addMode</span>(<span
-                        style="color: #ff4b00">"index"</span>, <span style="color: #ff4b00">"index.js"</span>, <span
-                        style="color: #ff4b00">"defer"</span>);
-});</code></pre>
-            <blockquote>以上代码编写在 run.js 中</blockquote>
+        <div class="cell large-3 medium-6 padding-1 align-top">
+            <div class="grid-x">
+                <i class="fa fa-diamond large-12 medium-shrink small-12"></i>
+                <p class="large-12 medium-auto small-12">可靠</p>
+            </div>
+            <p>使用接口注入的方式管理代码。<br/>内部并发域不对外暴露，更易管理且稳定。</p>
+        </div>
+        <div class="cell large-3 medium-6 padding-1 align-top">
+            <div class="grid-x">
+                <i class="fa fa-tachometer large-12 medium-shrink small-12"></i>
+                <p class="large-12 medium-auto small-12">高性能</p>
+            </div>
+            <p>使用 java 原生并发管理作为控制的底层，效率更高。</p>
+        </div>
+        <div class="cell large-3 medium-6 padding-1 align-top">
+            <div class="grid-x">
+                <i class="fa fa-leaf large-12 medium-shrink small-12"></i>
+                <p class="large-12 medium-auto small-12">易学习</p>
+            </div>
+            <p>所有实现均采用一个标准接口，且根据使用的 java 并发工具实现变形。</p>
         </div>
     </section>
 
-    <!-- 模块处理介绍 -->
+    <!--<p>如果你已经熟悉 java 的多线程管理，尤其是 ReentrantReadWriteLock 工具的话你会更容易学会本工具。</p>-->
+
+    <!-- 模块处理介绍 --><!--
     <section class="cell grid-x align-center loads" id="modeload">
         <div class="cell grid-x small-12 large-6 align-center">
             <div class="cell show-for-medium small-2 grid-y align-center"
@@ -113,9 +109,9 @@ confload.<span style="color: darkgoldenrod">runOf</span>(<span
 });</code></pre>
             <blockquote>以上代码编写在 run.js 中</blockquote>
         </div>
-    </section>
+    </section>-->
 
-    <!-- 框架配置介绍 -->
+    <!-- 框架配置介绍 --><!--
     <section class="cell grid-x align-center loads" id="frameconf">
         <div class="cell grid-x small-12 large-6 align-center">
             <div class="cell show-for-medium small-2 grid-y align-center"
@@ -149,9 +145,9 @@ confload.<span style="color: darkgoldenrod">runOf</span>(<span
 };</code></pre>
             <blockquote>以上代码编写在 cofig / conf.js 中</blockquote>
         </div>
-    </section>
+    </section>-->
 
-    <!-- 使用方法 -->
+    <!-- 使用方法 --><!--
     <section class="cell grid-y align-center padding-vertical-2 users padding-horizontal-2">
         <h3>使用</h3>
         <blockquote>安装 Node.js 作为 webpack 的运行环境</blockquote>
@@ -159,10 +155,10 @@ confload.<span style="color: darkgoldenrod">runOf</span>(<span
         <p>在项目文件夹下运行
             <code class="code-block"><span style="color: crimson">npm</span> <span
                     style="color:#ff4b00;">-y init</span><br/>
-                <span style="color: crimson">npm</span> <span style="color:#ff4b00;">install --save-dev</span></code>
+                <span style="color: crimson">npm</span> <span style="color:#ff4b00;">install &#45;&#45;save-dev</span></code>
             初始化项目配置并安装依赖即可开始使用
         </p>
-    </section>
+    </section>-->
 
 </section>
 

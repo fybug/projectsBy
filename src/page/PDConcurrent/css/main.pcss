@@ -1,6 +1,6 @@
 body {
     > header {
-        background: linear-gradient(to right, #ff2d2d, #ff9d1a, #ff9d1a, #ff9d1a) !important;
+        background: #ff9d1a !important;
         --headertextcolor: #fff;
         --asidetextcolor: black;
         z-index: 999;
@@ -10,12 +10,12 @@ body {
         > tit {
             position: center;
             overflow: hidden;
-            color: #fff;
-            background: linear-gradient(to right, #ff2d2d, #ff9d1a, #ff9d1a, #ff9d1a) !important;
+            color: #f3f3f3;
+            background: #ff9d1a !important;
 
             > div {
                 margin: auto;
-                max-width: 60rem;
+                max-width: 50rem;
 
                 &:before {
                     content: "";
@@ -37,5 +37,67 @@ body {
             }
         }
 
+        #characteristic {
+            > div {
+                margin-bottom: auto;
+
+                > div {
+                    color: #2a8af1;
+                }
+
+                > p {
+                    color: #5e5e5e;
+                }
+            }
+
+            /* 移动设备显示 */
+            @media print, screen and (max-width: 39.999em) {
+                /* 居中特性内容 */
+                > div > p {
+                    text-align: center;
+                }
+
+                i.fa {
+                    &, & ~ * {
+                        text-align: center;
+                    }
+
+                    font-size: 2.7rem;
+                    margin-bottom: .7rem;
+
+                    & + p {
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+
+            /* 中等设备显示 */
+            @media print, screen and (min-width: 40em) and (max-width: 63.999em) {
+                i.fa {
+                    font-size: 2rem;
+
+                    + p {
+                        margin-left: 1rem;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            /* 大屏幕设备显示 */
+            @media print, screen and (min-width: 64em) {
+                i.fa {
+                    &, & ~ * {
+                        text-align: center;
+                    }
+
+                    margin-bottom: .7rem;
+                    font-size: 3rem;
+
+                    + p {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
     }
 }

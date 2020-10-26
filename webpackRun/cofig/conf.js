@@ -45,7 +45,7 @@ global.Conf = {
     },
     // 图片输出配置
     imgOut: {
-        urlOf: "/projectsBy/build/fybug/",
+        urlOf: "/projectsby/",
         outName: 'static/pic/[name].[ext]'
     },
 
