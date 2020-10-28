@@ -25,6 +25,9 @@ window.plushcont = (Aout_blog) => {
         let dom = Aout_blog.data('dom');
         let step = 200;
 
+        // 移除动画
+        document.querySelectorAll("#contlist > div > loadfun").forEach(v => v.remove());
+
         setTimeout(() => {
             html = `
             <section class="grid-y shadow">
