@@ -31,10 +31,16 @@ body {
                 }
 
                 .button {
-                    background: #fffaf5;
-                    color: #ff9d1a;
+                    &, &:focus {
+                        background: #fffaf5;
+                        color: #ff9d1a;
+                    }
                 }
             }
+        }
+
+        .code-block {
+            background: #4b4b4b;
         }
 
         #characteristic {
@@ -97,6 +103,56 @@ body {
                         font-size: 2rem;
                     }
                 }
+            }
+        }
+
+        .jieshao {
+            padding: 1rem 3rem 1rem !important;
+
+            /* 移动设备显示 */
+            @media print, screen and (max-width: 39.999em) {
+                padding: 1rem 1.2rem !important;
+                > h3 {
+                    i {
+                        margin-right: .5rem
+                    }
+
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        #foundationuser {
+            color: #ff7561;
+
+            p {
+                color: #5e5e5e;
+            }
+        }
+
+        #deform {
+            color: #617bff;
+
+            p {
+                color: #8c92af;
+            }
+        }
+
+        #input {
+
+            padding-left: 5rem !important;
+            padding-right: 5rem !important;
+
+            /* 移动设备显示 */
+            @media print, screen and (max-width: 39.999em) {
+                padding-left: 3rem !important;
+                padding-right: 3rem !important;
+            }
+
+            color: #fc5252;
+
+            p {
+                color: #e8acac;
             }
         }
     }
