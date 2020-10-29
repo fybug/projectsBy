@@ -1,7 +1,7 @@
 ++++++
 title: aout.ass
-date: 2020-06-27 15:39
-tag: webpack 插件
-des: 自动化生成为伪动态博客数据的 **webpack** 插件，扫描 __markdown__ 文件时遵循 **aout.ass** 页面格式进行。 
-label: alert:缺少说明文件, alert:缺少项目说明, warning:缺少发行版, warning:缺少 wiki, warning:缺少主页, Empty Link
+date: 2020-06-16 8:00:00
+tag: web 手脚架, webpack
+des: 基于 **PDWebpack** 的 web 自动化构建手脚架。扫描按规范目录开发的内容，并使用 **PDWebpack** 生成 webpack 配置。可在用户代码文件中进行调整扫描到的模块或追加新的模块。
+label: warning:缺少主页, Empty Link
 ++++++
