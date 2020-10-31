@@ -17,17 +17,35 @@ body {
                 margin: auto;
                 max-width: 50rem;
 
+                /* 图标动画 */
+                @keyframes iconload {
+                    from {
+                        right: calc(90% - 200px);
+                        bottom: 100%;
+                        transform: rotate(0deg);
+                    }
+                    30% {
+                        right: calc(70% - 200px);
+                        bottom: -3rem;
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        right: 0;
+                        bottom: -3rem;
+                        transform: rotate(325deg);
+                    }
+                }
+
                 &:before {
                     content: "";
                     position: absolute;
                     height: 182px;
                     width: 200px;
-                    right: 0;
-                    bottom: -3rem;
                     background: url("../static/img/PDConcurrent.png") no-repeat center;
                     background-size: 200px 182px;
-                    transform: rotate(-35deg);
                     opacity: 0.5;
+
+                    animation: iconload 2.8s forwards;
                 }
 
                 .button {
