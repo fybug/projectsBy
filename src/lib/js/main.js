@@ -69,9 +69,9 @@ $(() => {
 window.menudata = [
     {
         link: "https://fybug.gitee.io/main.html",
-        name: "关于"
+        name: "我的主页"
     }, {
         link: "https://fybug.gitee.io/projectsBy/main.html",
-        name: "开源项目"
+        name: "开源 项目 / 作品 列表"
     }
 ];
