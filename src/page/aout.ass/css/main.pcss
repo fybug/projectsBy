@@ -1,0 +1,73 @@
+body {
+    > header {
+        z-index: 10;
+        background: #009966 !important;
+        --headertextcolor: #fff;
+        --asidetextcolor: black;
+    }
+
+    > section {
+        > tit {
+            background: #009966 !important;
+            color: #fff;
+
+            img {
+                height: 9rem;
+            }
+
+            > div {
+                max-width: 40rem !important;
+                margin: auto;
+
+                .button {
+                    color: white !important;
+                    border-color: #fff !important;
+                }
+            }
+        }
+
+        > hr {
+            width: 90vw !important;
+        }
+    }
+}
+
+#users {
+    max-width: 54rem;
+}
+
+#texing {
+    color: #868686;
+
+    i, h3 {
+        color: #6980bb;
+    }
+
+    @media screen and (min-width: 40em) {
+        height: 60vh !important;
+    }
+
+    .orbit {
+        max-width: 20rem;
+
+        .orbit-controls {
+            i {
+                margin-top: -1rem;
+            }
+
+            > .orbit-previous > i {
+                margin-left: -1rem;
+            }
+
+            > .orbit-next > i {
+                margin-right: -1rem;
+            }
+        }
+
+        .orbit-slide {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}

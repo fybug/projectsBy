@@ -64,7 +64,7 @@ $(() => {
 $(() => {
     let a = document.createElement("script");
     document.body.appendChild(a);
-    a.innerHTML = "$(document).foundation();";
+    a.innerHTML = `$(document).foundation();`;
 });
 window.menudata = [
     {
