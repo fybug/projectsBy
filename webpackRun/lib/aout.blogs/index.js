@@ -35,7 +35,8 @@ let Aout_Blogs = class Aout_Blogs {
      * @return {number} 现在的索引位置
      */
     static __load_header(markd, datalist, nowdataindex) {
-        /* 偏移当前索引数据集，每个数据集最多八个 */
+        /* 偏移当前索引数据集，每个数据集数据不得大于用户指定的数量 */
+        // 数据已有默认的一个
         let dataitem = datalist[nowdataindex];
         dataitem.length >= Aout_Blogs.itemnum && (datalist[++nowdataindex] = dataitem = []);
 
@@ -124,7 +125,7 @@ let Aout_Blogs = class Aout_Blogs {
 
             /* 处理每个页面的数据 */
             for (let v in jsonlist) {
-                // 标签数据集
+                // 页面标签数据集
                 let tags = {};
                 // 索引数据集
                 let datalist = [[]];
@@ -147,10 +148,13 @@ let Aout_Blogs = class Aout_Blogs {
                         // 没头数据不可生成索引
                         if (markd.length === 0) return;
                         /* 附加索引数据 */
-                        Aout_Blogs.showfield.page && (markd.page = v);
-                        Aout_Blogs.showfield.index && (markd.index = index);
-
-                        // 解析标签数据
+                        {
+                            // 页面名称
+                            Aout_Blogs.showfield.page && (markd.page = v);
+                            // 排序位置 id
+                            Aout_Blogs.showfield.dindex && (markd.index = index);
+                        }
+                        // 解析当前内容的标签数据
                         tags = tool.__pass_tag(markd, tags);
                         // 生成头数据
                         nowdataindex = Aout_Blogs.__load_header(markd, datalist, nowdataindex);

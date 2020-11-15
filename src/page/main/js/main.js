@@ -1,5 +1,6 @@
 require("../css/main.pcss");
-require('./aout.blog/aout.blog_sdk');
+require("../../../lib/js/lib/vhannels/tool/main")
+require('./aout.blog');
 
 let Aout_blog = new window.Aout_blog('main');
 
@@ -70,7 +71,7 @@ window.addEventListener("load", () => {
     Aout_blog.data("tags", document.querySelectorAll(".tags"));
 
     // tag 参数数据
-    let tag = getQueryString("tag");
+    let tag = vhannels.tool.getQueryString("tag");
 
     if (tag !== undefined) {
         document.querySelectorAll(".tags").forEach(v => v.remove());

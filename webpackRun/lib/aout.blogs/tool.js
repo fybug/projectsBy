@@ -1,12 +1,13 @@
 /** aout.blogs 辅助工具 */
 let Tool = {
+
     /** 扫描路径
      *
      * @return 按照页面名称分开的数据
      */
     __scann: (compilation) => {
         let jsonlist = {};
-        // 解析 markdown
+        // 扫描 markdown 文件
         glob.sync("src/page/*/static/blogs/*\\.md").forEach(v => {
             // 获取数据
             let data = compilation.inputFileSystem.readFileSync(v).toString().trim();
@@ -18,7 +19,7 @@ let Tool = {
                 cont = da[1];
                 return da[0];
             })(Tool.__pass_header(data));
-            // 处理内容
+            // 解析 markdown
             cont = marked(cont.trim());
 
             // 没数据
@@ -30,11 +31,13 @@ let Tool = {
             // 页面名称
             let pagename = path.basename(path.resolve(v, "../../../"));
 
+            // 不同页面的数据按照 页面名称 分开
             jsonlist[pagename] || (jsonlist[pagename] = []);
             jsonlist[pagename].push(header);
         });
         return jsonlist;
     },
+
     /** 解析头数据
      *
      * @param {string} data
@@ -94,8 +97,11 @@ let Tool = {
             // 填充处理后的标签数据到原本的头数据中
             markd.tag.push(v);
 
+            // 克隆一个数据对象
             let nowmark = Object.assign({}, markd);
+            // 删除克隆对象的 tag 内容
             delete nowmark.tag;
+            // 记录当前内容数据对象到对应的 tag 分类中
             tags[v] || (tags[v] = []);
             tags[v].push(nowmark);
         });
