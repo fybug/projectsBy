@@ -1,5 +1,5 @@
 require("../css/main.pcss");
-require("../../../lib/js/lib/vhannels/tool/main")
+require("../../../lib/js/lib/vhannels/vhannels.tool")
 require('./aout.blog');
 
 let Aout_blog = new window.Aout_blog('main');

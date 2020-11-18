@@ -1,1 +1,0 @@
-require("./floatmessage/main");

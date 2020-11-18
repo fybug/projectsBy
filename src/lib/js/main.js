@@ -1,6 +1,6 @@
 require('../css/font-awesome.css');
 require('../css/main.pcss');
-require('./lib/vhannels/main')
+require('./lib/vhannels/vhannels_publiclib')
 
 // 项目公共 js
 $(() => {
