@@ -1,0 +1,76 @@
+#users {
+    background: #232323;
+    max-width: 64rem;
+    color: #fff;
+    border-radius: 0;
+
+    > * {
+        max-width: 60rem;
+    }
+
+    > blockquote {
+        border-left-color: #d0c242;
+        max-width: 54rem;
+
+        p {
+            color: #cdc986;
+        }
+    }
+
+    nav {
+        padding: 0;
+
+        > section {
+            padding-left: .5rem;
+        }
+    }
+
+    .showdiv {
+        min-height: 2.5rem;
+        background: #efefef;
+    }
+
+    @media print, screen and (min-width: 64em) {
+        margin: 1rem auto;
+    }
+
+    @media print, screen and (min-width: 40em) {
+        padding: 0 3rem;
+        nav {
+            max-width: 48.5rem;
+
+            > section {
+                padding: 0 1rem;
+                max-width: 45rem;
+            }
+        }
+    }
+
+    .floatdialoglister {
+        > :first-child {
+            padding: .5rem 1rem;
+            background: #476eff;
+            color: #fefefe;
+        }
+    }
+}
+
+#floatmessageshow {
+    [vhannels="vhannels.floatContlos.FloatMessage"] {
+        position: relative;
+        padding: 0;
+        margin: 0 .4rem;
+    }
+
+    [vhannels="vhannels.floatContlos.FloatMessage.Message"] {
+        max-width: 100%;
+    }
+}
+
+#floatdialogshow {
+    [vhannels="vhannels.floatContlos.FloatDialog"] {
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+}

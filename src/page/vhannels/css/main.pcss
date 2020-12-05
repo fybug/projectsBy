@@ -1,0 +1,50 @@
+body {
+    &:before {
+        content: "";
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: #fff url("../static/img/backgroup.gif") !important;
+    }
+
+    > header {
+        z-index: 10;
+        background: #fff !important;
+        --headertextcolor: #000;
+        --asidetextcolor: #000;
+    }
+
+    > section {
+        > tit {
+            background: transparent !important;
+            color: #000;
+
+            > div {
+                max-width: 40rem !important;
+                margin: auto;
+
+                .button {
+                    background: #3876f5 !important;
+                    color: #fff !important;
+                    border-color: #fff !important;
+                }
+            }
+        }
+
+        > hr {
+            width: 90vw !important;
+        }
+    }
+}
+
+#bufenzhanshi {
+    @media print, screen and (min-width: 64em) {
+        height: 70vh !important;
+    }
+    background: linear-gradient(to right, #fc7e98, #8ea3fb) !important;
+    color: #fff;
+
+    hr {
+        border-color: #fff;
+    }
+}
