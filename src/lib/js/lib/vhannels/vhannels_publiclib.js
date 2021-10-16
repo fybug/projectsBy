@@ -109,25 +109,34 @@ class ViewGroup extends vhannels.View {
    *
    * 与 {@link views} 的区别为直接返回原始数据
    *
-   * @return {HTMLCollection} 节点集合
+   * @return {Element[]} 节点集合
    */
 
 
   doms() {
-    return this.getDom().children;
+    let re = [];
+    let node = this.getDom().firstElementChild;
+    /* 转化 */
+
+    while (node) {
+      re.push(node);
+      node = node.nextElementSibling;
+    }
+
+    return re;
   }
   /** 获取子视图集合
    *
    * 于 {@link doms} 的区别为返回包装后的数据
    *
-   * @return {vhannels.View[]} 视图集合
+   * @return {vhannels.ViewGroup[]} 视图集合
    */
 
 
   views() {
     let views = [];
 
-    for (let v of this.doms()) views.push(new vhannels.View(v));
+    for (let v of this.doms()) views.push(new vhannels.ViewGroup(v));
 
     return views;
   }
@@ -310,11 +319,21 @@ window.addEventListener("load", () => vhannels.View.Body = new vhannels.ViewGrou
 /***/ 9:
 /***/ (function(module, exports) {
 
-function _classPrivateFieldGet(receiver, privateMap) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to get private field on non-instance"); } if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+function _classPrivateFieldInitSpec(obj, privateMap, value) { _checkPrivateRedeclaration(obj, privateMap); privateMap.set(obj, value); }
 
-function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to set private field on non-instance"); } if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } return value; }
+function _checkPrivateRedeclaration(obj, privateCollection) { if (privateCollection.has(obj)) { throw new TypeError("Cannot initialize the same private elements twice on an object"); } }
 
-var _dom = new WeakMap();
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "get"); return _classApplyDescriptorGet(receiver, descriptor); }
+
+function _classApplyDescriptorGet(receiver, descriptor) { if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "set"); _classApplyDescriptorSet(receiver, descriptor, value); return value; }
+
+function _classExtractFieldDescriptor(receiver, privateMap, action) { if (!privateMap.has(receiver)) { throw new TypeError("attempted to " + action + " private field on non-instance"); } return privateMap.get(receiver); }
+
+function _classApplyDescriptorSet(receiver, descriptor, value) { if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } }
+
+var _dom = /*#__PURE__*/new WeakMap();
 
 /** vhannels 视图对象
  *
@@ -332,7 +351,7 @@ class View {
 
   /** @param {HTMLElement|vhannels.View} dom 当前节点 */
   constructor(dom) {
-    _dom.set(this, {
+    _classPrivateFieldInitSpec(this, _dom, {
       writable: true,
       value: void 0
     });
@@ -379,6 +398,18 @@ class View {
   text() {
     return this.getDom().innerText;
   }
+  /** 设置 innerText 的内容
+   *
+   * @param {string} t 文本内容
+   *
+   * @return {vhannels.View} this
+   */
+
+
+  settext(t) {
+    this.getDom().innerText = t;
+    return this;
+  }
   /*--------------------------------------------------------------------------------------------*/
 
   /** 属性修改
@@ -416,14 +447,26 @@ class View {
 
     return ats;
   }
-  /** 获取 value 属性的内容
+  /** 获取 value 的内容
    *
    * @return {string} 获取的属性值
    */
 
 
   value() {
-    return this.getattrs(["value"]).value;
+    return this.getDom().value;
+  }
+  /** 设置 value 的内容
+   *
+   * @param {string} v 要设置的值
+   *
+   * @return {vhannels.View} this
+   */
+
+
+  setvalue(v) {
+    this.getDom().value = v;
+    return this;
   }
   /*------------------------*/
 
@@ -467,7 +510,7 @@ class View {
       // 检查
       if (clas.check) for (let v of clas.check) re[v] = a.contains(v); // 移除
 
-      clas.remove && a.remove(...clas); // 切换
+      clas.remove && a.remove(...clas.remove); // 切换
 
       if (clas.toggle) if (Array.isArray(clas.toggle)) {
         for (let cla of clas.toggle) re[cla] = a.toggle(cla);

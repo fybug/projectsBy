@@ -1,5 +1,5 @@
 # fybug 开源 项目 / 作品 网站
-![](https://img.shields.io/badge/webpack-4.44.1+-2e93ff.svg "开发所使用等等 webpack 版本")
+![](https://img.shields.io/badge/webpack-4.44.1-2e93ff.svg "开发所使用等等 webpack 版本")
 ![](https://img.shields.io/badge/aout.ass-0.0.1-e93ff.svg "开发所使用等等 webpack 版本")
 ![](https://img.shields.io/badge/license-can`t%20copy-f27122.svg "使用的开源协议")
 

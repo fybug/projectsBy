@@ -98,7 +98,7 @@ vhannels.setName(['tool']);
  * @return {string} 获取的值
  */
 
-vhannels.tool.getQueryString = (key, defaval = undefined) => {
+vhannels.tool.getQueryString = function (key, defaval = undefined) {
   let str = location.href;
   let num = str.indexOf("?"); // 截取参数数据
 
@@ -127,7 +127,7 @@ vhannels.tool.getQueryString = (key, defaval = undefined) => {
  */
 
 
-vhannels.tool.Paging = (nowpage, maxpage, pagnum, edge, fun) => {
+vhannels.tool.Paging = function (nowpage, maxpage, pagnum, edge, fun) {
   // 向前快速索引
   if (nowpage > pagnum && maxpage > pagnum * 2 + 1) {
     edge(nowpage, false, nowpage > pagnum + 1, maxpage, pagnum);

@@ -1,6 +1,5 @@
 /** aout.blogs 辅助工具 */
 let Tool = {
-
     /** 扫描路径
      *
      * @return 按照页面名称分开的数据

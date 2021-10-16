@@ -108,7 +108,13 @@ __webpack_require__(3);
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _classStaticPrivateFieldSpecGet(receiver, classConstructor, descriptor) { if (receiver !== classConstructor) { throw new TypeError("Private static access of wrong provenance"); } if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+function _classStaticPrivateFieldSpecGet(receiver, classConstructor, descriptor) { _classCheckPrivateStaticAccess(receiver, classConstructor); _classCheckPrivateStaticFieldDescriptor(descriptor, "get"); return _classApplyDescriptorGet(receiver, descriptor); }
+
+function _classCheckPrivateStaticFieldDescriptor(descriptor, action) { if (descriptor === undefined) { throw new TypeError("attempted to " + action + " private static field before its declaration"); } }
+
+function _classCheckPrivateStaticAccess(receiver, classConstructor) { if (receiver !== classConstructor) { throw new TypeError("Private static access of wrong provenance"); } }
+
+function _classApplyDescriptorGet(receiver, descriptor) { if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
 
 /** 消息对象
  *
@@ -380,17 +386,27 @@ __webpack_require__(7);
 /* 6 */
 /***/ (function(module, exports) {
 
-function _classPrivateFieldGet(receiver, privateMap) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to get private field on non-instance"); } if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+function _classPrivateFieldInitSpec(obj, privateMap, value) { _checkPrivateRedeclaration(obj, privateMap); privateMap.set(obj, value); }
 
-function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to set private field on non-instance"); } if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } return value; }
+function _checkPrivateRedeclaration(obj, privateCollection) { if (privateCollection.has(obj)) { throw new TypeError("Cannot initialize the same private elements twice on an object"); } }
 
-var _float = new WeakMap();
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "get"); return _classApplyDescriptorGet(receiver, descriptor); }
 
-var _showlistern = new WeakMap();
+function _classApplyDescriptorGet(receiver, descriptor) { if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
 
-var _destroylistern = new WeakMap();
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "set"); _classApplyDescriptorSet(receiver, descriptor, value); return value; }
 
-var _showhtml = new WeakMap();
+function _classExtractFieldDescriptor(receiver, privateMap, action) { if (!privateMap.has(receiver)) { throw new TypeError("attempted to " + action + " private field on non-instance"); } return privateMap.get(receiver); }
+
+function _classApplyDescriptorSet(receiver, descriptor, value) { if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } }
+
+var _float = /*#__PURE__*/new WeakMap();
+
+var _showlistern = /*#__PURE__*/new WeakMap();
+
+var _destroylistern = /*#__PURE__*/new WeakMap();
+
+var _showhtml = /*#__PURE__*/new WeakMap();
 
 /** 子对话框对象
  *
@@ -416,7 +432,7 @@ class Dialog extends vhannels.ViewGroup {
    */
 
   /** 内容初始化方法
-   * @type function(vhannels.floatContlos.Dialog):(string|[Element|[vhannels.ViewGroup)
+   * @type function(vhannels.floatContlos.Dialog):(string|[Element]|[vhannels.ViewGroup])
    */
 
   /*--------------------------------------------------------------------------------------------*/
@@ -429,22 +445,22 @@ class Dialog extends vhannels.ViewGroup {
   constructor(attrs = {}) {
     super(document.createElement("dialog"));
 
-    _float.set(this, {
+    _classPrivateFieldInitSpec(this, _float, {
       writable: true,
       value: undefined
     });
 
-    _showlistern.set(this, {
+    _classPrivateFieldInitSpec(this, _showlistern, {
       writable: true,
       value: d => void 0
     });
 
-    _destroylistern.set(this, {
+    _classPrivateFieldInitSpec(this, _destroylistern, {
       writable: true,
       value: d => void 0
     });
 
-    _showhtml.set(this, {
+    _classPrivateFieldInitSpec(this, _showhtml, {
       writable: true,
       value: d => ""
     });
@@ -559,17 +575,27 @@ vhannels.floatContlos.Dialog = Dialog;
 /* 7 */
 /***/ (function(module, exports) {
 
-function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to set private field on non-instance"); } if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } return value; }
+function _classPrivateFieldInitSpec(obj, privateMap, value) { _checkPrivateRedeclaration(obj, privateMap); privateMap.set(obj, value); }
 
-function _classPrivateFieldGet(receiver, privateMap) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to get private field on non-instance"); } if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+function _checkPrivateRedeclaration(obj, privateCollection) { if (privateCollection.has(obj)) { throw new TypeError("Cannot initialize the same private elements twice on an object"); } }
 
-var _showlistern = new WeakMap();
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "set"); _classApplyDescriptorSet(receiver, descriptor, value); return value; }
 
-var _destroylistern = new WeakMap();
+function _classApplyDescriptorSet(receiver, descriptor, value) { if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } }
 
-var _nowdialog = new WeakMap();
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "get"); return _classApplyDescriptorGet(receiver, descriptor); }
 
-var _canend = new WeakMap();
+function _classExtractFieldDescriptor(receiver, privateMap, action) { if (!privateMap.has(receiver)) { throw new TypeError("attempted to " + action + " private field on non-instance"); } return privateMap.get(receiver); }
+
+function _classApplyDescriptorGet(receiver, descriptor) { if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+
+var _showlistern = /*#__PURE__*/new WeakMap();
+
+var _destroylistern = /*#__PURE__*/new WeakMap();
+
+var _nowdialog = /*#__PURE__*/new WeakMap();
+
+var _canend = /*#__PURE__*/new WeakMap();
 
 /** 悬浮对话框工具
  *
@@ -607,22 +633,22 @@ class FloatDialog extends vhannels.ViewGroup {
   constructor(dom = vhannels.View.Body) {
     super(document.createElement("floatdialog"));
 
-    _showlistern.set(this, {
+    _classPrivateFieldInitSpec(this, _showlistern, {
       writable: true,
       value: d => void 0
     });
 
-    _destroylistern.set(this, {
+    _classPrivateFieldInitSpec(this, _destroylistern, {
       writable: true,
       value: d => void 0
     });
 
-    _nowdialog.set(this, {
+    _classPrivateFieldInitSpec(this, _nowdialog, {
       writable: true,
       value: undefined
     });
 
-    _canend.set(this, {
+    _classPrivateFieldInitSpec(this, _canend, {
       writable: true,
       value: false
     });
