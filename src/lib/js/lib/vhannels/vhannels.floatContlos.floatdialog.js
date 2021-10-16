@@ -1,1 +1,465 @@
-!function(t){var e={};function n(r){if(e[r])return e[r].exports;var o=e[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=t,n.c=e,n.d=function(t,e,r){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:r})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var o in t)n.d(r,o,function(e){return t[e]}.bind(null,o));return r},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="",n(n.s=4)}([,,,,function(t,e,n){vhannels.setName(["floatContlos"]),n(5),n(6),n(7)},function(t,e,n){},function(t,e){function n(t){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function r(t){return function(t){if(Array.isArray(t))return o(t)}(t)||function(t){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(t))return Array.from(t)}(t)||function(t,e){if(!t)return;if("string"==typeof t)return o(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);"Object"===n&&t.constructor&&(n=t.constructor.name);if("Map"===n||"Set"===n)return Array.from(t);if("Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return o(t,e)}(t)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function o(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,r=new Array(e);n<e;n++)r[n]=t[n];return r}function i(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function u(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}function a(t,e){return(a=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function l(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}();return function(){var n,r=s(t);if(e){var o=s(this).constructor;n=Reflect.construct(r,arguments,o)}else n=r.apply(this,arguments);return c(this,n)}}function c(t,e){return!e||"object"!==n(e)&&"function"!=typeof e?f(t):e}function f(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}function s(t){return(s=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}function p(t,e){var n=e.get(t);if(!n)throw new TypeError("attempted to get private field on non-instance");return n.get?n.get.call(t):n.value}function y(t,e,n){var r=e.get(t);if(!r)throw new TypeError("attempted to set private field on non-instance");if(r.set)r.set.call(t,n);else{if(!r.writable)throw new TypeError("attempted to set read only private field");r.value=n}return n}var h=new WeakMap,v=new WeakMap,b=new WeakMap,d=new WeakMap,w=function(t){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&a(t,e)}(s,vhannels.ViewGroup);var e,n,o,c=l(s);function s(){var t,e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return i(this,s),t=c.call(this,document.createElement("dialog")),h.set(f(t),{writable:!0,value:void 0}),v.set(f(t),{writable:!0,value:function(t){}}),b.set(f(t),{writable:!0,value:function(t){}}),d.set(f(t),{writable:!0,value:function(t){return""}}),t.attrs({vhannels:"vhannels.floatContlos.FloatDialog.Dialog"}),t.attrs(e),t.getDom().addEventListener("click",(function(t){return t.stopPropagation()})),t}return e=s,(n=[{key:"show_Html",value:function(t){return y(this,d,t),this}},{key:"showListern",value:function(t){return y(this,v,t),this}},{key:"destroyListern",value:function(t){return y(this,b,t),this}},{key:"__binFloatDialog",value:function(t){return y(this,h,t),this}},{key:"__show",value:function(){var t=this,e=p(this,d).call(this,this);return"string"==typeof e?this.setHtml(e):this.append.apply(this,r(e)),p(this,v).call(this,this),setTimeout((function(){return t.class({toggle:{show:!0}})}),1),this}},{key:"__destroy",value:function(){var t=this;this.class({toggle:{show:!1}}),setTimeout((function(){p(t,b).call(t,t),y(t,h,void 0),t.setHtml(""),t.remove()}),300)}}])&&u(e.prototype,n),o&&u(e,o),s}();vhannels.floatContlos.Dialog=w},function(t,e){function n(t){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function r(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function o(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}function i(t,e){return(i=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function u(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}();return function(){var n,r=c(t);if(e){var o=c(this).constructor;n=Reflect.construct(r,arguments,o)}else n=r.apply(this,arguments);return a(this,n)}}function a(t,e){return!e||"object"!==n(e)&&"function"!=typeof e?l(t):e}function l(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}function c(t){return(c=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}function f(t,e,n){var r=e.get(t);if(!r)throw new TypeError("attempted to set private field on non-instance");if(r.set)r.set.call(t,n);else{if(!r.writable)throw new TypeError("attempted to set read only private field");r.value=n}return n}function s(t,e){var n=e.get(t);if(!n)throw new TypeError("attempted to get private field on non-instance");return n.get?n.get.call(t):n.value}var p=new WeakMap,y=new WeakMap,h=new WeakMap,v=new WeakMap,b=function(t){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&i(t,e)}(b,vhannels.ViewGroup);var e,n,a,c=u(b);function b(){var t,e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:vhannels.View.Body;return r(this,b),t=c.call(this,document.createElement("floatdialog")),p.set(l(t),{writable:!0,value:function(t){}}),y.set(l(t),{writable:!0,value:function(t){}}),h.set(l(t),{writable:!0,value:void 0}),v.set(l(t),{writable:!0,value:!1}),b.__toViewGroup(e).append(l(t)),t.attrs({vhannels:"vhannels.floatContlos.FloatDialog"}),t.getDom().addEventListener("click",(function(e){s(l(t),v)&&t.destroy()})),t}return e=b,(n=[{key:"showListern",value:function(t){return f(this,p,t),this}},{key:"destroyListern",value:function(t){return f(this,y,t),this}},{key:"show",value:function(t){var e=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return void 0===s(this,h)&&(f(this,v,e),this.class({toggle:{show:!0,canend:e}}),this.append(t),f(this,h,t),s(this,p).call(this,t),t.__binFloatDialog(this),t.__show(),!0)}},{key:"destroy",value:function(){var t=this;s(this,h).__destroy(),setTimeout((function(){t.class({toggle:{show:!1}}),s(t,y).call(t,s(t,h)),f(t,h,void 0)}),300)}}])&&o(e.prototype,n),a&&o(e,a),b}();vhannels.floatContlos.FloatDialog=b}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+vhannels.setName(["floatContlos"]);
+
+__webpack_require__(5);
+
+__webpack_require__(6);
+
+__webpack_require__(7);
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to get private field on non-instance"); } if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to set private field on non-instance"); } if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } return value; }
+
+var _float = new WeakMap();
+
+var _showlistern = new WeakMap();
+
+var _destroylistern = new WeakMap();
+
+var _showhtml = new WeakMap();
+
+/** 子对话框对象
+ *
+ * 用于以控件的形式展示子窗口
+ *
+ * @extends vhannels.ViewGroup
+ * @class vhannels.floatContlos.Dialog
+ * @see vhannels.floatContlos.FloatDialog
+ * @author fybug
+ * @version 0.0.1
+ */
+class Dialog extends vhannels.ViewGroup {
+  /** 当前所属的容器
+   * @type vhannels.floatContlos.FloatDialog
+   */
+
+  /** 展示监听
+   * @type function(vhannels.floatContlos.Dialog)
+   */
+
+  /** 销毁监听
+   * @type function(vhannels.floatContlos.Dialog)
+   */
+
+  /** 内容初始化方法
+   * @type function(vhannels.floatContlos.Dialog):(string|[Element|[vhannels.ViewGroup)
+   */
+
+  /*--------------------------------------------------------------------------------------------*/
+
+  /**
+   * 通过传入的对象来指定控件的属性
+   *
+   * @param {{}} attrs 属性映射，属性名: 属性值
+   */
+  constructor(attrs = {}) {
+    super(document.createElement("dialog"));
+
+    _float.set(this, {
+      writable: true,
+      value: undefined
+    });
+
+    _showlistern.set(this, {
+      writable: true,
+      value: d => void 0
+    });
+
+    _destroylistern.set(this, {
+      writable: true,
+      value: d => void 0
+    });
+
+    _showhtml.set(this, {
+      writable: true,
+      value: d => ""
+    });
+
+    this.attrs({
+      "vhannels": "vhannels.floatContlos.FloatDialog.Dialog"
+    });
+    this.attrs(attrs);
+    this.getDom().addEventListener("click", e => e.stopPropagation());
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 展示的 html
+   *
+   * 每次展示的时候使用该方法重新生成 html 内容或者 dom 对象
+   *
+   * @param {function(vhannels.floatContlos.Dialog):(string|[Element]|[vhannels.ViewGroup])} html 生成 html 内容的方法
+   * @return {vhannels.floatContlos.Dialog} this
+   */
+
+
+  show_Html(html) {
+    _classPrivateFieldSet(this, _showhtml, html);
+
+    return this;
+  }
+  /** 展示监听
+   *
+   * 控件展示时的监听，参数传入控件本身
+   *
+   * @param {function(vhannels.floatContlos.Dialog)} run 监听方法
+   * @return {vhannels.floatContlos.Dialog} this
+   */
+
+
+  showListern(run) {
+    _classPrivateFieldSet(this, _showlistern, run);
+
+    return this;
+  }
+  /** 销毁监听
+   *
+   * 控件销毁时的监听，参数传入控件本身
+   *
+   * @param {function(vhannels.floatContlos.Dialog)} run 监听方法
+   * @return {vhannels.floatContlos.Dialog} this
+   */
+
+
+  destroyListern(run) {
+    _classPrivateFieldSet(this, _destroylistern, run);
+
+    return this;
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 绑定对话框容器
+   *
+   * @param {vhannels.floatContlos.FloatDialog} flo 对话框容器对象
+   * @return {vhannels.floatContlos.Dialog} this
+   */
+
+
+  __binFloatDialog(flo) {
+    _classPrivateFieldSet(this, _float, flo);
+
+    return this;
+  }
+  /** 展示对话框
+   * @return {vhannels.floatContlos.Dialog} this
+   */
+
+
+  __show() {
+    let ht = _classPrivateFieldGet(this, _showhtml).call(this, this);
+
+    if (typeof ht === "string") this.setHtml(ht);else this.append(...ht);
+
+    _classPrivateFieldGet(this, _showlistern).call(this, this);
+
+    setTimeout(() => this.class({
+      toggle: {
+        "show": true
+      }
+    }), 1);
+    return this;
+  }
+  /** 销毁对话框 */
+
+
+  __destroy() {
+    this.class({
+      toggle: {
+        "show": false
+      }
+    });
+    setTimeout(() => {
+      _classPrivateFieldGet(this, _destroylistern).call(this, this);
+
+      _classPrivateFieldSet(this, _float, undefined);
+
+      this.setHtml("");
+      this.remove();
+    }, 300);
+  }
+
+}
+
+vhannels.floatContlos.Dialog = Dialog;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to set private field on non-instance"); } if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } return value; }
+
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to get private field on non-instance"); } if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+
+var _showlistern = new WeakMap();
+
+var _destroylistern = new WeakMap();
+
+var _nowdialog = new WeakMap();
+
+var _canend = new WeakMap();
+
+/** 悬浮对话框工具
+ *
+ * 用于容纳对话框对象，并且提供展示与销毁的方法<br/>
+ * 一次只能使用一个对话框对象，不可堆积多个
+ *
+ * @extends vhannels.ViewGroup
+ * @class vhannels.floatContlos.FloatDialog
+ * @see vhannels.floatContlos.Dialog
+ * @author fybug
+ * @version 0.0.1
+ */
+class FloatDialog extends vhannels.ViewGroup {
+  /** 展示监听
+   * @type function(vhannels.floatContlos.Dialog)
+   */
+
+  /** 销毁监听
+   * @type function(vhannels.floatContlos.Dialog)
+   */
+
+  /** 子控件
+   * @type vhannels.floatContlos.Dialog
+   */
+
+  /**
+   * @type boolean
+   */
+
+  /*--------------------------------------------------------------------------------------------*/
+
+  /**
+   * @param {Element|vhannels.ViewGroup} dom
+   */
+  constructor(dom = vhannels.View.Body) {
+    super(document.createElement("floatdialog"));
+
+    _showlistern.set(this, {
+      writable: true,
+      value: d => void 0
+    });
+
+    _destroylistern.set(this, {
+      writable: true,
+      value: d => void 0
+    });
+
+    _nowdialog.set(this, {
+      writable: true,
+      value: undefined
+    });
+
+    _canend.set(this, {
+      writable: true,
+      value: false
+    });
+
+    FloatDialog.__toViewGroup(dom).append(this);
+
+    this.attrs({
+      "vhannels": "vhannels.floatContlos.FloatDialog"
+    }); // 关闭监听
+
+    this.getDom().addEventListener("click", e => {
+      if (_classPrivateFieldGet(this, _canend)) this.destroy();
+    });
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 展示监听
+   *
+   * 控件展示时的监听，参数传入当前子控件
+   *
+   * @param {function(vhannels.floatContlos.Dialog)} run 监听方法
+   * @return {vhannels.floatContlos.FloatDialog} this
+   */
+
+
+  showListern(run) {
+    _classPrivateFieldSet(this, _showlistern, run);
+
+    return this;
+  }
+  /** 销毁监听
+   *
+   * 控件销毁时的监听，参数传入当前子控件
+   *
+   * @param {function(vhannels.floatContlos.Dialog)} run 监听方法
+   * @return {vhannels.floatContlos.FloatDialog} this
+   */
+
+
+  destroyListern(run) {
+    _classPrivateFieldSet(this, _destroylistern, run);
+
+    return this;
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 展示对话框和容器
+   *
+   * 展示容器后使用 {@link vhannels.floatContlos.Dialog.__show} 方法展示对话框
+   *
+   * @param {vhannels.floatContlos.Dialog} dailog 对话框对象
+   * @param {boolean} canhide 是否可以通过外部关闭
+   *
+   * @return {boolean}
+   */
+
+
+  show(dailog, canhide = false) {
+    // 一次只能展示一个
+    if (_classPrivateFieldGet(this, _nowdialog) !== undefined) return false;
+
+    _classPrivateFieldSet(this, _canend, canhide); // 展示容器
+
+
+    this.class({
+      toggle: {
+        "show": true,
+        "canend": canhide
+      }
+    });
+    this.append(dailog); // 启动监听
+
+    _classPrivateFieldSet(this, _nowdialog, dailog);
+
+    _classPrivateFieldGet(this, _showlistern).call(this, dailog);
+
+    dailog.__binFloatDialog(this);
+
+    dailog.__show();
+
+    return true;
+  }
+  /** 销毁对话框容器
+   *
+   * 使用 {@link vhannels.floatContlos.Dialog.__destroy} 方法销毁对话框后隐藏容器
+   */
+
+
+  destroy() {
+    _classPrivateFieldGet(this, _nowdialog).__destroy();
+
+    setTimeout(() => {
+      this.class({
+        toggle: {
+          "show": false
+        }
+      });
+
+      _classPrivateFieldGet(this, _destroylistern).call(this, _classPrivateFieldGet(this, _nowdialog));
+
+      _classPrivateFieldSet(this, _nowdialog, undefined);
+    }, 300);
+  }
+
+}
+
+vhannels.floatContlos.FloatDialog = FloatDialog;
+
+/***/ })
+/******/ ]);

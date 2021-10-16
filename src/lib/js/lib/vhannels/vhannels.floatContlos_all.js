@@ -1,1 +1,746 @@
-!function(t){var e={};function n(r){if(e[r])return e[r].exports;var o=e[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=t,n.c=e,n.d=function(t,e,r){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:r})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var o in t)n.d(r,o,function(e){return t[e]}.bind(null,o));return r},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="",n(n.s=11)}([function(t,e,n){vhannels.setName(["floatContlos"]),n(1),n(2),n(3)},function(t,e,n){},function(t,e){function n(t){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function r(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function o(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}function i(t,e){return(i=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function u(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}();return function(){var n,r=s(t);if(e){var o=s(this).constructor;n=Reflect.construct(r,arguments,o)}else n=r.apply(this,arguments);return a(this,n)}}function a(t,e){return!e||"object"!==n(e)&&"function"!=typeof e?c(t):e}function c(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}function s(t){return(s=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}function l(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}function f(t,e,n){if(t!==e)throw new TypeError("Private static access of wrong provenance");return n.get?n.get.call(t):n.value}var p=function(t){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&i(t,e)}(p,vhannels.ViewGroup);var e,n,a,s=u(p);function p(){var t,e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(r(this,p),l(c(t=s.call(this,document.createElement("message"))),"stylemap",{load:f(p,p,y),success:f(p,p,y),error:f(p,p,y),warning:f(p,p,y),destroy:function(t){return setTimeout((function(){return t.remove()}),350)}}),t.attrs({vhannels:"vhannels.floatContlos.FloatMessage.Message"}),e.default){var n=["load","success","error","warning"];n.forEach((function(n){return t.stylemap[n]=e.default})),delete e.default}return t.stylemap=Object.assign(t.stylemap,e),t}return e=p,(n=[{key:"message_load",value:function(t){return this.__toclass("primary"),this.stylemap.load(t,this),this}},{key:"message_success",value:function(t){return this.__toclass("success"),this.stylemap.success(t,this),this}},{key:"message_error",value:function(t){return this.__toclass("alert"),this.stylemap.error(t,this),this}},{key:"message_warnning",value:function(t){return this.__toclass("warning"),this.stylemap.warning(t,this),this}},{key:"message_destroy",value:function(){this.class(["destroy"]),this.stylemap.destroy(this)}},{key:"__toclass",value:function(t){var e={primary:!1,secondary:!1,success:!1,alert:!1,warning:!1};e[t]=!0,this.class({toggle:e})}}])&&o(e.prototype,n),a&&o(e,a),p}(),y={writable:!0,value:function(t,e){return e.querySelector("p").getDom().innerText=t}};vhannels.floatContlos.Message=p},function(t,e){function n(t){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function r(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function o(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}function i(t,e){return(i=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function u(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}();return function(){var n,r=c(t);if(e){var o=c(this).constructor;n=Reflect.construct(r,arguments,o)}else n=r.apply(this,arguments);return a(this,n)}}function a(t,e){return!e||"object"!==n(e)&&"function"!=typeof e?function(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}(t):e}function c(t){return(c=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}var s=function(t){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&i(t,e)}(s,vhannels.ViewGroup);var e,n,a,c=u(s);function s(){var t,e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:vhannels.View.Body;return r(this,s),t=c.call(this,document.createElement("messagegroup")),e.append(t.getDom()),t.attrs({vhannels:"vhannels.floatContlos.FloatMessage"}),t}return e=s,(n=[{key:"showMessage",value:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:void 0;return this.append(t),setTimeout((function(){return t.class({toggle:{show:!0,destroy:!1}})}),10),void 0!==e&&setTimeout((function(){return t.message_destroy()}),e+9),t}},{key:"createMessage",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:function(t){return t.append(document.createElement("p"))},n=new vhannels.floatContlos.Message(t);return e(n),n}}])&&o(e.prototype,n),a&&o(e,a),s}();vhannels.floatContlos.FloatMessage=s},function(t,e,n){vhannels.setName(["floatContlos"]),n(5),n(6),n(7)},function(t,e,n){},function(t,e){function n(t){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function r(t){return function(t){if(Array.isArray(t))return o(t)}(t)||function(t){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(t))return Array.from(t)}(t)||function(t,e){if(!t)return;if("string"==typeof t)return o(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);"Object"===n&&t.constructor&&(n=t.constructor.name);if("Map"===n||"Set"===n)return Array.from(t);if("Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return o(t,e)}(t)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function o(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,r=new Array(e);n<e;n++)r[n]=t[n];return r}function i(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function u(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}function a(t,e){return(a=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function c(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}();return function(){var n,r=f(t);if(e){var o=f(this).constructor;n=Reflect.construct(r,arguments,o)}else n=r.apply(this,arguments);return s(this,n)}}function s(t,e){return!e||"object"!==n(e)&&"function"!=typeof e?l(t):e}function l(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}function f(t){return(f=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}function p(t,e){var n=e.get(t);if(!n)throw new TypeError("attempted to get private field on non-instance");return n.get?n.get.call(t):n.value}function y(t,e,n){var r=e.get(t);if(!r)throw new TypeError("attempted to set private field on non-instance");if(r.set)r.set.call(t,n);else{if(!r.writable)throw new TypeError("attempted to set read only private field");r.value=n}return n}var h=new WeakMap,v=new WeakMap,b=new WeakMap,d=new WeakMap,m=function(t){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&a(t,e)}(f,vhannels.ViewGroup);var e,n,o,s=c(f);function f(){var t,e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return i(this,f),t=s.call(this,document.createElement("dialog")),h.set(l(t),{writable:!0,value:void 0}),v.set(l(t),{writable:!0,value:function(t){}}),b.set(l(t),{writable:!0,value:function(t){}}),d.set(l(t),{writable:!0,value:function(t){return""}}),t.attrs({vhannels:"vhannels.floatContlos.FloatDialog.Dialog"}),t.attrs(e),t.getDom().addEventListener("click",(function(t){return t.stopPropagation()})),t}return e=f,(n=[{key:"show_Html",value:function(t){return y(this,d,t),this}},{key:"showListern",value:function(t){return y(this,v,t),this}},{key:"destroyListern",value:function(t){return y(this,b,t),this}},{key:"__binFloatDialog",value:function(t){return y(this,h,t),this}},{key:"__show",value:function(){var t=this,e=p(this,d).call(this,this);return"string"==typeof e?this.setHtml(e):this.append.apply(this,r(e)),p(this,v).call(this,this),setTimeout((function(){return t.class({toggle:{show:!0}})}),1),this}},{key:"__destroy",value:function(){var t=this;this.class({toggle:{show:!1}}),setTimeout((function(){p(t,b).call(t,t),y(t,h,void 0),t.setHtml(""),t.remove()}),300)}}])&&u(e.prototype,n),o&&u(e,o),f}();vhannels.floatContlos.Dialog=m},function(t,e){function n(t){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function r(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function o(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}function i(t,e){return(i=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function u(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}();return function(){var n,r=s(t);if(e){var o=s(this).constructor;n=Reflect.construct(r,arguments,o)}else n=r.apply(this,arguments);return a(this,n)}}function a(t,e){return!e||"object"!==n(e)&&"function"!=typeof e?c(t):e}function c(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}function s(t){return(s=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}function l(t,e,n){var r=e.get(t);if(!r)throw new TypeError("attempted to set private field on non-instance");if(r.set)r.set.call(t,n);else{if(!r.writable)throw new TypeError("attempted to set read only private field");r.value=n}return n}function f(t,e){var n=e.get(t);if(!n)throw new TypeError("attempted to get private field on non-instance");return n.get?n.get.call(t):n.value}var p=new WeakMap,y=new WeakMap,h=new WeakMap,v=new WeakMap,b=function(t){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&i(t,e)}(b,vhannels.ViewGroup);var e,n,a,s=u(b);function b(){var t,e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:vhannels.View.Body;return r(this,b),t=s.call(this,document.createElement("floatdialog")),p.set(c(t),{writable:!0,value:function(t){}}),y.set(c(t),{writable:!0,value:function(t){}}),h.set(c(t),{writable:!0,value:void 0}),v.set(c(t),{writable:!0,value:!1}),b.__toViewGroup(e).append(c(t)),t.attrs({vhannels:"vhannels.floatContlos.FloatDialog"}),t.getDom().addEventListener("click",(function(e){f(c(t),v)&&t.destroy()})),t}return e=b,(n=[{key:"showListern",value:function(t){return l(this,p,t),this}},{key:"destroyListern",value:function(t){return l(this,y,t),this}},{key:"show",value:function(t){var e=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return void 0===f(this,h)&&(l(this,v,e),this.class({toggle:{show:!0,canend:e}}),this.append(t),l(this,h,t),f(this,p).call(this,t),t.__binFloatDialog(this),t.__show(),!0)}},{key:"destroy",value:function(){var t=this;f(this,h).__destroy(),setTimeout((function(){t.class({toggle:{show:!1}}),f(t,y).call(t,f(t,h)),l(t,h,void 0)}),300)}}])&&o(e.prototype,n),a&&o(e,a),b}();vhannels.floatContlos.FloatDialog=b},,,,function(t,e,n){n(0),n(4)}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+vhannels.setName(["floatContlos"]);
+
+__webpack_require__(1);
+
+__webpack_require__(2);
+
+__webpack_require__(3);
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classStaticPrivateFieldSpecGet(receiver, classConstructor, descriptor) { if (receiver !== classConstructor) { throw new TypeError("Private static access of wrong provenance"); } if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+
+/** 消息对象
+ *
+ * 用于显示多种状态的消息，每种状态都可以设定对应显示方式
+ *
+ * @extends vhannels.ViewGroup
+ * @class vhannels.floatContlos.Message
+ * @see vhannels.floatContlos.FloatMessage
+ * @author fybug
+ * @version 0.0.1
+ */
+class Message extends vhannels.ViewGroup {
+  /** 默认处理 */
+
+  /** 消息样式列表 */
+
+  /**
+   * @param {{
+   *    default:function(string,vhannels.ViewGroup)|undefined,
+   *    load:function(string,vhannels.ViewGroup)|undefined,
+   *    success:function(string,vhannels.ViewGroup)|undefined,
+   *    error:function(string,vhannels.ViewGroup)|undefined,
+   *    warning:function(string,vhannels.ViewGroup)|undefined,
+   *    destroy:function(vhannels.ViewGroup)
+   * }} styrun 每一个状态的显示处理，load/success/error 会额外传入当前请求的消息内容，在有消息的状态没有定义处理的时候会使用默认处理 default
+   */
+  constructor(styrun = {}) {
+    super(document.createElement("message"));
+
+    _defineProperty(this, "stylemap", {
+      /** 表示正在加载中的样式
+       *
+       * @type function(string,vhannels.ViewGroup)
+       */
+      load: _classStaticPrivateFieldSpecGet(Message, Message, _nullfun),
+
+      /** 表示成功消息的样式
+       *
+       * @type function(string,vhannels.ViewGroup)
+       */
+      success: _classStaticPrivateFieldSpecGet(Message, Message, _nullfun),
+
+      /** 表示错误消息的样式
+       *
+       * @type function(string,vhannels.ViewGroup)
+       */
+      error: _classStaticPrivateFieldSpecGet(Message, Message, _nullfun),
+
+      /** 表示警告消息的样式
+       *
+       * @type function(string,vhannels.ViewGroup)
+       */
+      warning: _classStaticPrivateFieldSpecGet(Message, Message, _nullfun),
+
+      /** 指示消息如何销毁
+       *
+       * @type function(vhannels.ViewGroup)
+       */
+      destroy: v => setTimeout(() => v.remove(), 350)
+    });
+
+    this.attrs({
+      vhannels: "vhannels.floatContlos.FloatMessage.Message"
+    });
+
+    if (styrun.default) {
+      let messagelist = ["load", "success", "error", "warning"];
+      messagelist.forEach(v => this.stylemap[v] = styrun.default);
+      delete styrun.default;
+    }
+
+    this.stylemap = Object.assign(this.stylemap, styrun);
+  }
+  /** 加载中的消息
+   *
+   * 追加 primary 类，并运行 load 显示处理
+   *
+   * @param {string} message 消息内容
+   *
+   * @return {vhannels.floatContlos.Message} this
+   */
+
+
+  message_load(message) {
+    this.__toclass("primary");
+
+    this.stylemap.load(message, this);
+    return this;
+  }
+  /** 成功的消息
+   *
+   * 追加 success 类，并运行 success 显示处理
+   *
+   * @param {string} message 消息内容
+   *
+   * @return {vhannels.floatContlos.Message} this
+   */
+
+
+  message_success(message) {
+    this.__toclass("success");
+
+    this.stylemap.success(message, this);
+    return this;
+  }
+  /** 错误的消息
+   *
+   * 追加 alert 类，并运行 error 显示处理
+   *
+   * @param {string} message 消息内容
+   *
+   * @return {vhannels.floatContlos.Message} this
+   */
+
+
+  message_error(message) {
+    this.__toclass("alert");
+
+    this.stylemap.error(message, this);
+    return this;
+  }
+  /** 警告的消息
+   *
+   * 追加 warning 类，并运行 warning 显示处理
+   *
+   * @param {string} message 消息内容
+   *
+   * @return {vhannels.floatContlos.Message} this
+   */
+
+
+  message_warnning(message) {
+    this.__toclass("warning");
+
+    this.stylemap.warning(message, this);
+    return this;
+  }
+  /** 销毁当前消息
+   *
+   * 追加 destroy 类，并运行 destroy 显示处理
+   */
+
+
+  message_destroy() {
+    this.class(["destroy"]);
+    this.stylemap.destroy(this);
+  }
+  /**
+   * @param {"destroy"|"primary"|"secondary"|"success"|"alert"|"warning"} classna
+   */
+
+
+  __toclass(classna) {
+    let a = {
+      "primary": false,
+      "secondary": false,
+      "success": false,
+      "alert": false,
+      "warning": false
+    };
+    a[classna] = true;
+    this.class({
+      "toggle": a
+    });
+  }
+
+}
+
+var _nullfun = {
+  writable: true,
+  value: (message, v) => v.querySelector("p").getDom().innerText = message
+};
+vhannels.floatContlos.Message = Message;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+/** 悬浮消息工具
+ *
+ * 用于包装消息对象
+ *
+ * @extends vhannels.ViewGroup
+ * @class vhannels.floatContlos.FloatMessage
+ * @see vhannels.floatContlos.Message
+ * @author fybug
+ * @version 0.0.1
+ */
+class FloatMessage extends vhannels.ViewGroup {
+  /**
+   * @param {HTMLElement|vhannels.ViewGroup} dom 容器添加到该节点内
+   */
+  constructor(dom = vhannels.View.Body) {
+    super(document.createElement("messagegroup")); // 插入消息容器
+
+    dom.append(this.getDom()); // 赋予消息组样式
+
+    this.attrs({
+      vhannels: "vhannels.floatContlos.FloatMessage"
+    });
+  }
+  /** 展示消息对象
+   *
+   * @param {vhannels.floatContlos.Message} message 要展示的消息
+   * @param {number|undefined} time 消息展示的时长，不传入则为无限
+   *
+   * @return {vhannels.floatContlos.Message} 消息对象
+   */
+
+
+  showMessage(message, time = undefined) {
+    this.append(message);
+    setTimeout(() => message.class({
+      toggle: {
+        "show": true,
+        "destroy": false
+      }
+    }), 10);
+    time !== undefined && setTimeout(() => message.message_destroy(), time + 9);
+    return message;
+  }
+  /** 创建消息对象
+   *
+   * 创建消息对象并赋予状态处理
+   *
+   * @param {{
+   *    default:function(string,vhannels.ViewGroup)|undefined,
+   *    load:function(string,vhannels.ViewGroup)|undefined,
+   *    success:function(string,vhannels.ViewGroup)|undefined,
+   *    error:function(string,vhannels.ViewGroup)|undefined,
+   *    warning:function(string,vhannels.ViewGroup)|undefined,
+   *    destroy:function(vhannels.ViewGroup)
+   * }} styrun 每一个状态的显示处理，load/success/error 会额外传入当前请求的消息内容，在有消息的状态没有定义处理的时候会使用默认处理 default
+   * @param {function(vhannels.ViewGroup)} bestyle 前置渲染，初始化视图的内容，传入消息视图对象
+   *
+   * @return {vhannels.floatContlos.Message} 消息对象
+   */
+
+
+  createMessage(styrun = {}, bestyle = v => v.append(document.createElement("p"))) {
+    let v = new vhannels.floatContlos.Message(styrun);
+    bestyle(v);
+    return v;
+  }
+
+}
+
+vhannels.floatContlos.FloatMessage = FloatMessage;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+vhannels.setName(["floatContlos"]);
+
+__webpack_require__(5);
+
+__webpack_require__(6);
+
+__webpack_require__(7);
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to get private field on non-instance"); } if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to set private field on non-instance"); } if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } return value; }
+
+var _float = new WeakMap();
+
+var _showlistern = new WeakMap();
+
+var _destroylistern = new WeakMap();
+
+var _showhtml = new WeakMap();
+
+/** 子对话框对象
+ *
+ * 用于以控件的形式展示子窗口
+ *
+ * @extends vhannels.ViewGroup
+ * @class vhannels.floatContlos.Dialog
+ * @see vhannels.floatContlos.FloatDialog
+ * @author fybug
+ * @version 0.0.1
+ */
+class Dialog extends vhannels.ViewGroup {
+  /** 当前所属的容器
+   * @type vhannels.floatContlos.FloatDialog
+   */
+
+  /** 展示监听
+   * @type function(vhannels.floatContlos.Dialog)
+   */
+
+  /** 销毁监听
+   * @type function(vhannels.floatContlos.Dialog)
+   */
+
+  /** 内容初始化方法
+   * @type function(vhannels.floatContlos.Dialog):(string|[Element|[vhannels.ViewGroup)
+   */
+
+  /*--------------------------------------------------------------------------------------------*/
+
+  /**
+   * 通过传入的对象来指定控件的属性
+   *
+   * @param {{}} attrs 属性映射，属性名: 属性值
+   */
+  constructor(attrs = {}) {
+    super(document.createElement("dialog"));
+
+    _float.set(this, {
+      writable: true,
+      value: undefined
+    });
+
+    _showlistern.set(this, {
+      writable: true,
+      value: d => void 0
+    });
+
+    _destroylistern.set(this, {
+      writable: true,
+      value: d => void 0
+    });
+
+    _showhtml.set(this, {
+      writable: true,
+      value: d => ""
+    });
+
+    this.attrs({
+      "vhannels": "vhannels.floatContlos.FloatDialog.Dialog"
+    });
+    this.attrs(attrs);
+    this.getDom().addEventListener("click", e => e.stopPropagation());
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 展示的 html
+   *
+   * 每次展示的时候使用该方法重新生成 html 内容或者 dom 对象
+   *
+   * @param {function(vhannels.floatContlos.Dialog):(string|[Element]|[vhannels.ViewGroup])} html 生成 html 内容的方法
+   * @return {vhannels.floatContlos.Dialog} this
+   */
+
+
+  show_Html(html) {
+    _classPrivateFieldSet(this, _showhtml, html);
+
+    return this;
+  }
+  /** 展示监听
+   *
+   * 控件展示时的监听，参数传入控件本身
+   *
+   * @param {function(vhannels.floatContlos.Dialog)} run 监听方法
+   * @return {vhannels.floatContlos.Dialog} this
+   */
+
+
+  showListern(run) {
+    _classPrivateFieldSet(this, _showlistern, run);
+
+    return this;
+  }
+  /** 销毁监听
+   *
+   * 控件销毁时的监听，参数传入控件本身
+   *
+   * @param {function(vhannels.floatContlos.Dialog)} run 监听方法
+   * @return {vhannels.floatContlos.Dialog} this
+   */
+
+
+  destroyListern(run) {
+    _classPrivateFieldSet(this, _destroylistern, run);
+
+    return this;
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 绑定对话框容器
+   *
+   * @param {vhannels.floatContlos.FloatDialog} flo 对话框容器对象
+   * @return {vhannels.floatContlos.Dialog} this
+   */
+
+
+  __binFloatDialog(flo) {
+    _classPrivateFieldSet(this, _float, flo);
+
+    return this;
+  }
+  /** 展示对话框
+   * @return {vhannels.floatContlos.Dialog} this
+   */
+
+
+  __show() {
+    let ht = _classPrivateFieldGet(this, _showhtml).call(this, this);
+
+    if (typeof ht === "string") this.setHtml(ht);else this.append(...ht);
+
+    _classPrivateFieldGet(this, _showlistern).call(this, this);
+
+    setTimeout(() => this.class({
+      toggle: {
+        "show": true
+      }
+    }), 1);
+    return this;
+  }
+  /** 销毁对话框 */
+
+
+  __destroy() {
+    this.class({
+      toggle: {
+        "show": false
+      }
+    });
+    setTimeout(() => {
+      _classPrivateFieldGet(this, _destroylistern).call(this, this);
+
+      _classPrivateFieldSet(this, _float, undefined);
+
+      this.setHtml("");
+      this.remove();
+    }, 300);
+  }
+
+}
+
+vhannels.floatContlos.Dialog = Dialog;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to set private field on non-instance"); } if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } return value; }
+
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to get private field on non-instance"); } if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+
+var _showlistern = new WeakMap();
+
+var _destroylistern = new WeakMap();
+
+var _nowdialog = new WeakMap();
+
+var _canend = new WeakMap();
+
+/** 悬浮对话框工具
+ *
+ * 用于容纳对话框对象，并且提供展示与销毁的方法<br/>
+ * 一次只能使用一个对话框对象，不可堆积多个
+ *
+ * @extends vhannels.ViewGroup
+ * @class vhannels.floatContlos.FloatDialog
+ * @see vhannels.floatContlos.Dialog
+ * @author fybug
+ * @version 0.0.1
+ */
+class FloatDialog extends vhannels.ViewGroup {
+  /** 展示监听
+   * @type function(vhannels.floatContlos.Dialog)
+   */
+
+  /** 销毁监听
+   * @type function(vhannels.floatContlos.Dialog)
+   */
+
+  /** 子控件
+   * @type vhannels.floatContlos.Dialog
+   */
+
+  /**
+   * @type boolean
+   */
+
+  /*--------------------------------------------------------------------------------------------*/
+
+  /**
+   * @param {Element|vhannels.ViewGroup} dom
+   */
+  constructor(dom = vhannels.View.Body) {
+    super(document.createElement("floatdialog"));
+
+    _showlistern.set(this, {
+      writable: true,
+      value: d => void 0
+    });
+
+    _destroylistern.set(this, {
+      writable: true,
+      value: d => void 0
+    });
+
+    _nowdialog.set(this, {
+      writable: true,
+      value: undefined
+    });
+
+    _canend.set(this, {
+      writable: true,
+      value: false
+    });
+
+    FloatDialog.__toViewGroup(dom).append(this);
+
+    this.attrs({
+      "vhannels": "vhannels.floatContlos.FloatDialog"
+    }); // 关闭监听
+
+    this.getDom().addEventListener("click", e => {
+      if (_classPrivateFieldGet(this, _canend)) this.destroy();
+    });
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 展示监听
+   *
+   * 控件展示时的监听，参数传入当前子控件
+   *
+   * @param {function(vhannels.floatContlos.Dialog)} run 监听方法
+   * @return {vhannels.floatContlos.FloatDialog} this
+   */
+
+
+  showListern(run) {
+    _classPrivateFieldSet(this, _showlistern, run);
+
+    return this;
+  }
+  /** 销毁监听
+   *
+   * 控件销毁时的监听，参数传入当前子控件
+   *
+   * @param {function(vhannels.floatContlos.Dialog)} run 监听方法
+   * @return {vhannels.floatContlos.FloatDialog} this
+   */
+
+
+  destroyListern(run) {
+    _classPrivateFieldSet(this, _destroylistern, run);
+
+    return this;
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 展示对话框和容器
+   *
+   * 展示容器后使用 {@link vhannels.floatContlos.Dialog.__show} 方法展示对话框
+   *
+   * @param {vhannels.floatContlos.Dialog} dailog 对话框对象
+   * @param {boolean} canhide 是否可以通过外部关闭
+   *
+   * @return {boolean}
+   */
+
+
+  show(dailog, canhide = false) {
+    // 一次只能展示一个
+    if (_classPrivateFieldGet(this, _nowdialog) !== undefined) return false;
+
+    _classPrivateFieldSet(this, _canend, canhide); // 展示容器
+
+
+    this.class({
+      toggle: {
+        "show": true,
+        "canend": canhide
+      }
+    });
+    this.append(dailog); // 启动监听
+
+    _classPrivateFieldSet(this, _nowdialog, dailog);
+
+    _classPrivateFieldGet(this, _showlistern).call(this, dailog);
+
+    dailog.__binFloatDialog(this);
+
+    dailog.__show();
+
+    return true;
+  }
+  /** 销毁对话框容器
+   *
+   * 使用 {@link vhannels.floatContlos.Dialog.__destroy} 方法销毁对话框后隐藏容器
+   */
+
+
+  destroy() {
+    _classPrivateFieldGet(this, _nowdialog).__destroy();
+
+    setTimeout(() => {
+      this.class({
+        toggle: {
+          "show": false
+        }
+      });
+
+      _classPrivateFieldGet(this, _destroylistern).call(this, _classPrivateFieldGet(this, _nowdialog));
+
+      _classPrivateFieldSet(this, _nowdialog, undefined);
+    }, 300);
+  }
+
+}
+
+vhannels.floatContlos.FloatDialog = FloatDialog;
+
+/***/ }),
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(0);
+
+__webpack_require__(4);
+
+/***/ })
+/******/ ]);

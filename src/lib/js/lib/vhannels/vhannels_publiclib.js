@@ -1,1 +1,563 @@
-!function(e){var t={};function r(n){if(t[n])return t[n].exports;var o=t[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)r.d(n,o,function(t){return e[t]}.bind(null,o));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s=8)}({10:function(e,t){function r(e){return(r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function n(e,t){var r;if("undefined"==typeof Symbol||null==e[Symbol.iterator]){if(Array.isArray(e)||(r=function(e,t){if(!e)return;if("string"==typeof e)return o(e,t);var r=Object.prototype.toString.call(e).slice(8,-1);"Object"===r&&e.constructor&&(r=e.constructor.name);if("Map"===r||"Set"===r)return Array.from(e);if("Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r))return o(e,t)}(e))||t&&e&&"number"==typeof e.length){r&&(e=r);var n=0,i=function(){};return{s:i,n:function(){return n>=e.length?{done:!0}:{done:!1,value:e[n++]}},e:function(e){throw e},f:i}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var a,u=!0,l=!1;return{s:function(){r=e[Symbol.iterator]()},n:function(){var e=r.next();return u=e.done,e},e:function(e){l=!0,a=e},f:function(){try{u||null==r.return||r.return()}finally{if(l)throw a}}}}function o(e,t){(null==t||t>e.length)&&(t=e.length);for(var r=0,n=new Array(t);r<t;r++)n[r]=e[r];return n}function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function a(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}function u(e,t){return(u=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function l(e){var t=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(e){return!1}}();return function(){var r,n=c(e);if(t){var o=c(this).constructor;r=Reflect.construct(n,arguments,o)}else r=n.apply(this,arguments);return f(this,r)}}function f(e,t){return!t||"object"!==r(t)&&"function"!=typeof t?function(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}(e):t}function c(e){return(c=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}var s=function(e){!function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&u(e,t)}(c,vhannels.View);var t,r,o,f=l(c);function c(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:document.body;return i(this,c),f.call(this,e)}return t=c,o=[{key:"creaViewGroup",value:function(e){return new c("string"==typeof e?document.createElement(e):e)}},{key:"__toViewGroup",value:function(e){return e instanceof vhannels.ViewGroup?e:this.creaViewGroup(e)}}],(r=[{key:"doms",value:function(){return this.getDom().children}},{key:"views",value:function(){var e,t=[],r=n(this.doms());try{for(r.s();!(e=r.n()).done;){var o=e.value;t.push(new vhannels.View(o))}}catch(e){r.e(e)}finally{r.f()}return t}},{key:"querySelectorAll",value:function(e){var t=this.getDom().querySelectorAll(e),r=[];return t.forEach((function(e){return r.push(new vhannels.ViewGroup(e))})),r}},{key:"querySelector",value:function(e){var t=this.getDom().querySelector(e);return new vhannels.ViewGroup(t)}},{key:"prepend",value:function(){for(var e=this.getDom(),t=arguments.length,r=new Array(t),n=0;n<t;n++)r[n]=arguments[n];for(var o=0,i=r;o<i.length;o++){var a=i[o];e.insertBefore(c.__toDom(a),e.firstChild)}return this}},{key:"append",value:function(){for(var e=this.getDom(),t=arguments.length,r=new Array(t),n=0;n<t;n++)r[n]=arguments[n];for(var o=0,i=r;o<i.length;o++){var a=i[o];e.appendChild(c.__toDom(a))}return this}},{key:"addHtml",value:function(e){return this.getDom().innerHTML+=e,this}},{key:"delete",value:function(){for(var e=this.getDom(),t=arguments.length,r=new Array(t),n=0;n<t;n++)r[n]=arguments[n];for(var o=0,i=r;o<i.length;o++){var a=i[o];e.removeChild(c.__toDom(a))}return this}},{key:"replace",value:function(){for(var e=this.getDom(),t=arguments.length,r=new Array(t),n=0;n<t;n++)r[n]=arguments[n];for(var o=0,i=r;o<i.length;o++){var a=i[o];e.replaceChild(c.__toDom(a.to),c.__toDom(a.of))}return this}},{key:"clean",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:void 0;return void 0===e?this.getDom().innerHTML="":this.querySelectorAll(e).forEach((function(e){return e.remove()})),this}}])&&a(t.prototype,r),o&&a(t,o),c}();vhannels.ViewGroup=s},8:function(e,t,r){function n(e,t){var r;if("undefined"==typeof Symbol||null==e[Symbol.iterator]){if(Array.isArray(e)||(r=function(e,t){if(!e)return;if("string"==typeof e)return o(e,t);var r=Object.prototype.toString.call(e).slice(8,-1);"Object"===r&&e.constructor&&(r=e.constructor.name);if("Map"===r||"Set"===r)return Array.from(e);if("Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r))return o(e,t)}(e))||t&&e&&"number"==typeof e.length){r&&(e=r);var n=0,i=function(){};return{s:i,n:function(){return n>=e.length?{done:!0}:{done:!1,value:e[n++]}},e:function(e){throw e},f:i}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var a,u=!0,l=!1;return{s:function(){r=e[Symbol.iterator]()},n:function(){var e=r.next();return u=e.done,e},e:function(e){l=!0,a=e},f:function(){try{u||null==r.return||r.return()}finally{if(l)throw a}}}}function o(e,t){(null==t||t>e.length)&&(t=e.length);for(var r=0,n=new Array(t);r<t;r++)n[r]=e[r];return n}window.vhannels||(window.vhannels={}),vhannels.setName=function(e){var t,r=window.vhannels,o=n(e);try{for(o.s();!(t=o.n()).done;){var i=t.value;void 0!==i&&(void 0===r[i]&&(r[i]={}),r=r[i])}}catch(e){o.e(e)}finally{o.f()}return r},r(9),r(10),window.addEventListener("load",(function(){return vhannels.View.Body=new vhannels.ViewGroup(document.body)}))},9:function(e,t){function r(e){return function(e){if(Array.isArray(e))return i(e)}(e)||function(e){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(e))return Array.from(e)}(e)||o(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function n(e,t){var r;if("undefined"==typeof Symbol||null==e[Symbol.iterator]){if(Array.isArray(e)||(r=o(e))||t&&e&&"number"==typeof e.length){r&&(e=r);var n=0,i=function(){};return{s:i,n:function(){return n>=e.length?{done:!0}:{done:!1,value:e[n++]}},e:function(e){throw e},f:i}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var a,u=!0,l=!1;return{s:function(){r=e[Symbol.iterator]()},n:function(){var e=r.next();return u=e.done,e},e:function(e){l=!0,a=e},f:function(){try{u||null==r.return||r.return()}finally{if(l)throw a}}}}function o(e,t){if(e){if("string"==typeof e)return i(e,t);var r=Object.prototype.toString.call(e).slice(8,-1);return"Object"===r&&e.constructor&&(r=e.constructor.name),"Map"===r||"Set"===r?Array.from(e):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?i(e,t):void 0}}function i(e,t){(null==t||t>e.length)&&(t=e.length);for(var r=0,n=new Array(t);r<t;r++)n[r]=e[r];return n}function a(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}var u=new WeakMap,l=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),u.set(this,{writable:!0,value:void 0}),function(e,t,r){var n=t.get(e);if(!n)throw new TypeError("attempted to set private field on non-instance");if(n.set)n.set.call(e,r);else{if(!n.writable)throw new TypeError("attempted to set read only private field");n.value=r}}(this,u,e.__toDom(t))}var t,o,i;return t=e,i=[{key:"__toDom",value:function(e){return e instanceof vhannels.View?e.getDom():e}},{key:"creaView",value:function(t){return new e("string"==typeof t?document.createElement(t):t)}}],(o=[{key:"getDom",value:function(){return function(e,t){var r=t.get(e);if(!r)throw new TypeError("attempted to get private field on non-instance");return r.get?r.get.call(e):r.value}(this,u)}},{key:"setHtml",value:function(e){return this.getDom().innerHTML=e,this}},{key:"html",value:function(){return this.getDom().innerHTML}},{key:"text",value:function(){return this.getDom().innerText}},{key:"attrs",value:function(e){var t,r=this.getDom();for(var n in e)void 0!==n&&(void 0!==(t=e[n])?r.setAttribute(n,t):r.removeAttribute(n));return this}},{key:"getattrs",value:function(e){var t,r=this.getDom(),o={},i=n(e);try{for(i.s();!(t=i.n()).done;){var a=t.value;o[a]=r.getAttribute(a)}}catch(e){i.e(e)}finally{i.f()}return o}},{key:"value",value:function(){return this.getattrs(["value"]).value}},{key:"class",value:function(e){var t=this.getDom().classList,o={};if(Array.isArray(e))t.add.apply(t,r(e));else{if(e.check){var i,a=n(e.check);try{for(a.s();!(i=a.n()).done;){var u=i.value;o[u]=t.contains(u)}}catch(e){a.e(e)}finally{a.f()}}if(e.remove&&t.remove.apply(t,r(e)),e.toggle)if(Array.isArray(e.toggle)){var l,f=n(e.toggle);try{for(f.s();!(l=f.n()).done;){var c=l.value;o[c]=t.toggle(c)}}catch(e){f.e(e)}finally{f.f()}}else for(var s in e.toggle)o[s]=t.toggle(s,e.toggle[s])}return o}},{key:"style",value:function(e){var t=this.getDom().style,r={};for(var o in e)if("remove"===o){var i,a=n(o);try{for(a.s();!(i=a.n()).done;){var u=i.value;t.removeProperty(u),r[u]&&(r[u]=void 0)}}catch(e){a.e(e)}finally{a.f()}}else if("get"===o){var l,f=n(o);try{for(f.s();!(l=f.n()).done;){var c=l.value;r[c]={val:t.getPropertyValue(c),important:t.getPropertyPriority(c)}}}catch(e){f.e(e)}finally{f.f()}}else Array.isArray(e[o])?t.setProperty(o,e[o][0],e[o][1]):t.setProperty(o,e[o]);return r}},{key:"remove",value:function(){var e=this.getDom();e.parentNode.removeChild(e)}}])&&a(t.prototype,o),i&&a(t,i),e}();vhannels.View=l}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 10:
+/***/ (function(module, exports) {
+
+/** vhannels 视图容器对象
+ *
+ * 存放一个原始节点，并支持子对象操作
+ *
+ * @author fybug
+ * @version 0.0.1
+ * @extends vhannels.View
+ * @class vhannels.ViewGroup
+ */
+class ViewGroup extends vhannels.View {
+  /** @param {HTMLElement|vhannels.View} dom 当前节点 */
+  constructor(dom = document.body) {
+    super(dom);
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 获取子节点集合
+   *
+   * 与 {@link views} 的区别为直接返回原始数据
+   *
+   * @return {HTMLCollection} 节点集合
+   */
+
+
+  doms() {
+    return this.getDom().children;
+  }
+  /** 获取子视图集合
+   *
+   * 于 {@link doms} 的区别为返回包装后的数据
+   *
+   * @return {vhannels.View[]} 视图集合
+   */
+
+
+  views() {
+    let views = [];
+
+    for (let v of this.doms()) views.push(new vhannels.View(v));
+
+    return views;
+  }
+  /** 查找子视图
+   *
+   * @param {string} select 查找规则
+   * @return {vhannels.ViewGroup[]}
+   */
+
+
+  querySelectorAll(select) {
+    let d = this.getDom(); // 查询的数据
+
+    let nods = d.querySelectorAll(select);
+    /* 转化 */
+
+    let re = [];
+    nods.forEach(v => re.push(new vhannels.ViewGroup(v)));
+    return re;
+  }
+  /** 查找子视图
+   *
+   * @param {string} select 查找规则
+   * @return {vhannels.ViewGroup}
+   */
+
+
+  querySelector(select) {
+    let d = this.getDom(); // 查询的数据
+
+    let node = d.querySelector(select);
+    return new vhannels.ViewGroup(node);
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 在容器前面插入视图
+   *
+   * @param {vhannels.View|HTMLElement} view
+   * @return {vhannels.ViewGroup} this
+   */
+
+
+  prepend(...view) {
+    let d = this.getDom();
+
+    for (let v of view) d.insertBefore(ViewGroup.__toDom(v), d.firstChild);
+
+    return this;
+  }
+  /*-------------------------*/
+
+  /** 在容器后面追加视图
+   *
+   * @param {vhannels.View|HTMLElement} view
+   * @return {vhannels.ViewGroup} this
+   */
+
+
+  append(...view) {
+    let d = this.getDom();
+
+    for (let v of view) d.appendChild(ViewGroup.__toDom(v));
+
+    return this;
+  }
+  /** 追加 html 内容
+   *
+   * @param {string} html 追加的 html 内容
+   * @return {vhannels.ViewGroup} this
+   */
+
+
+  addHtml(html) {
+    this.getDom().innerHTML += html;
+    return this;
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 删除容器内指定的视图
+   *
+   * @param {vhannels.View|HTMLElement} view 要删除的视图
+   * @return {vhannels.ViewGroup} this
+   */
+
+
+  delete(...view) {
+    let d = this.getDom();
+
+    for (let v of view) d.removeChild(ViewGroup.__toDom(v));
+
+    return this;
+  }
+  /** 替换指定视图
+   *
+   * 通过替换映射进行，of 表示要替换的视图，to 标识替换成的视图
+   *
+   * @param {{
+   *     of:HTMLElement|vhannels.View,
+   *     to:HTMLElement|vhannels.View
+   * }} viewto 替换列表
+   * @return {vhannels.ViewGroup} this
+   */
+
+
+  replace(...viewto) {
+    let d = this.getDom();
+
+    for (let vt of viewto) d.replaceChild(ViewGroup.__toDom(vt.to), ViewGroup.__toDom(vt.of));
+
+    return this;
+  }
+  /** 清空内容
+   *
+   * 可通过查询表达式删除指定的所有内容
+   *
+   * @param {string|undefined} query 查询表达式
+   * @return {vhannels.ViewGroup} this
+   */
+
+
+  clean(query = undefined) {
+    if (query === undefined) this.getDom().innerHTML = '';else this.querySelectorAll(query).forEach(v => v.remove());
+    return this;
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+
+  static creaViewGroup(dom) {
+    if (typeof dom === 'string') return new ViewGroup(document.createElement(dom));else return new ViewGroup(dom);
+  }
+  /** 确保对象为 ViewGroup 对象
+   *
+   * @return vhannels.ViewGroup
+   */
+
+
+  static __toViewGroup(dom) {
+    if (dom instanceof vhannels.ViewGroup) return dom;
+    return this.creaViewGroup(dom);
+  }
+
+}
+
+vhannels.ViewGroup = ViewGroup;
+
+/***/ }),
+
+/***/ 8:
+/***/ (function(module, exports, __webpack_require__) {
+
+window.vhannels || (window.vhannels = {});
+/** 检查命名空间
+ *
+ * @param {[string]} names 命名空间
+ */
+
+vhannels.setName = names => {
+  let last = window.vhannels;
+
+  for (let name of names) {
+    if (name === undefined) continue; // 命名空间未就绪
+
+    if (last[name] === undefined) last[name] = {}; // 记录当前命名空间
+
+    last = last[name];
+  }
+
+  return last;
+};
+
+__webpack_require__(9);
+
+__webpack_require__(10); // 全局 Body 对象
+
+
+window.addEventListener("load", () => vhannels.View.Body = new vhannels.ViewGroup(document.body));
+
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, exports) {
+
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to get private field on non-instance"); } if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = privateMap.get(receiver); if (!descriptor) { throw new TypeError("attempted to set private field on non-instance"); } if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } return value; }
+
+var _dom = new WeakMap();
+
+/** vhannels 视图对象
+ *
+ * 存放一个原始节点，并包含对应的操作封装
+ *
+ * @author fybug
+ * @version 0.0.1
+ * @class vhannels.View
+ */
+class View {
+  /** 当前节点
+   *
+   *  @type HTMLElement
+   */
+
+  /** @param {HTMLElement|vhannels.View} dom 当前节点 */
+  constructor(dom) {
+    _dom.set(this, {
+      writable: true,
+      value: void 0
+    });
+
+    _classPrivateFieldSet(this, _dom, View.__toDom(dom));
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 获取当前节点
+   *
+   * @return {HTMLElement}
+   */
+
+
+  getDom() {
+    return _classPrivateFieldGet(this, _dom);
+  }
+  /** 刷新 html 内容
+   *
+   * @param {string} html 新的 html 内容
+   * @return {vhannels.View} this
+   */
+
+
+  setHtml(html) {
+    this.getDom().innerHTML = html;
+    return this;
+  }
+  /** 获取 html 内容
+   *
+   * @return {string}
+   */
+
+
+  html() {
+    return this.getDom().innerHTML;
+  }
+  /** 获取 innerText 的内容
+   *
+   * @return {string}
+   */
+
+
+  text() {
+    return this.getDom().innerText;
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 属性修改
+   *
+   * @param {Object} data { 属性名：属性值 }，属性值为 undefined 则是消除属性
+   * @return {vhannels.View} this
+   */
+
+
+  attrs(data) {
+    let d = this.getDom();
+    let v;
+
+    for (let key in data) {
+      if (key === undefined) continue;
+      v = data[key]; // 检查是否删除
+
+      v !== undefined ? d.setAttribute(key, v) : d.removeAttribute(key);
+    }
+
+    return this;
+  }
+  /** 获取属性
+   *
+   * @param {[string]} data 要获取的属性列表
+   * @return {{"string":string}} 获取的属性映射
+   */
+
+
+  getattrs(data) {
+    let d = this.getDom();
+    let ats = {};
+
+    for (let v of data) ats[v] = d.getAttribute(v);
+
+    return ats;
+  }
+  /** 获取 value 属性的内容
+   *
+   * @return {string} 获取的属性值
+   */
+
+
+  value() {
+    return this.getattrs(["value"]).value;
+  }
+  /*------------------------*/
+
+  /** 类操作
+   *
+   * 提供一体化类操作的接口
+   *
+   * - 追加类<br/>
+   * class("a","s");
+   *
+   * - 移除类<br/>
+   * class({"remove":["a","s"]});
+   *
+   * - 检查是否有对应的类<br/>
+   * class({"check":["a","s"]});
+   *
+   * - 切换类操作<br/>
+   * class({"toggle":["a","s"]});
+   *
+   * 在检查或者切换类的操作后会返回对应的结果，其他操作则是空对象
+   *
+   * @param {{
+   *     check:undefined|[string],
+   *     remove:undefined|[string],
+   *     toggle:undefined|{
+   *         classname:undefined|boolean
+   *     }|[string]
+   * }|[string]} clas
+   * @return {{
+   *     classname:boolean
+   * }}
+   */
+
+
+  class(clas) {
+    let d = this.getDom();
+    let a = d.classList;
+    let re = {}; // 追加
+
+    if (Array.isArray(clas)) a.add(...clas);else {
+      // 检查
+      if (clas.check) for (let v of clas.check) re[v] = a.contains(v); // 移除
+
+      clas.remove && a.remove(...clas); // 切换
+
+      if (clas.toggle) if (Array.isArray(clas.toggle)) {
+        for (let cla of clas.toggle) re[cla] = a.toggle(cla);
+      } else {
+        for (let cla in clas.toggle) re[cla] = a.toggle(cla, clas.toggle[cla]);
+      }
+    }
+    return re;
+  }
+  /** css 样式操作
+   *
+   * 操作一体化样式操作
+   *
+   * 传入的对象示意需要进行的操作，
+   * 含有 "remove" 字段将会对声明的样式进行移除，
+   * 含有 "get" 字段将会获取声明的样式的值以及是否 !important，
+   * 在对象中直接声明要修改的样式，可以和上面的两个字段混合使用
+   *
+   * - 移除样式<br/>
+   * style({"remove":["color"]});
+   *
+   * - 获取样式内容<br/>
+   * style({"get":["color"]});
+   *
+   * - 设置样式<br/>
+   * style({"color":"red"});
+   *
+   * @param {{
+   *     cssname:string|[string],
+   *     "remove":[string],
+   *     "get":[string]
+   * }} sty
+   *
+   * @return {{
+   *     cssname:{
+   *         "val":string,
+   *         "important":"important"|""
+   *     }
+   * }}
+   */
+
+
+  style(sty) {
+    let d = this.getDom();
+    let s = d.style;
+    let re = {};
+
+    for (let v in sty) if (v === "remove") // 移除
+      for (let res of v) {
+        s.removeProperty(res);
+        re[res] && (re[res] = undefined);
+      } else if (v === "get") for (let res of v) re[res] = {
+      "val": s.getPropertyValue(res),
+      "important": s.getPropertyPriority(res)
+    };else {
+      // 设置 important
+      if (Array.isArray(sty[v])) s.setProperty(v, sty[v][0], sty[v][1]);else s.setProperty(v, sty[v]);
+    }
+
+    return re;
+  }
+  /*--------------------------------------------------------------------------------------------*/
+
+  /** 移除此视图 */
+
+
+  remove() {
+    let d = this.getDom();
+    d.parentNode.removeChild(d);
+  }
+  /** 确保为原始元素节点
+   *
+   * @param {HTMLElement|vhannels.View} view 要确保的对象
+   * @return {HTMLElement} 元素节点
+   */
+
+
+  static __toDom(view) {
+    if (view instanceof vhannels.View) return view.getDom();
+    return view;
+  }
+
+  static creaView(dom) {
+    if (typeof dom === 'string') return new View(document.createElement(dom));else return new View(dom);
+  }
+
+}
+
+vhannels.View = View;
+
+/***/ })
+
+/******/ });
