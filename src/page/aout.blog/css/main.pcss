@@ -1,0 +1,108 @@
+body {
+    > header {
+        /* 背景与全局相同 */
+        background: linear-gradient(to right, #7F7FD5, #86A8E7, #7dd6d0) !important;
+        --headertextcolor: #fff;
+        --asidetextcolor: black;
+    }
+
+    > section {
+        > * {
+            > * {
+                width: 100% !important;
+            }
+
+            .icon {
+                img {
+                    /* 手机下的图标大小 */
+                    width: 3rem;
+                    @media print, screen and (min-width: 40em) {
+                        /* 平板下的图标大小 */
+                        width: 4.5rem;
+                    }
+                    @media print, screen and (min-width: 64em) {
+                        /* pc下的图标大小 */
+                    }
+                }
+
+                i {
+                    /* 手机下的图标大小 */
+                    font-size: 3rem;
+                    @media print, screen and (min-width: 40em) {
+                        /* 平板下的图标大小 */
+                        font-size: 3.5rem;
+                    }
+                    @media print, screen and (min-width: 64em) {
+                        /* pc下的图标大小 */
+                        font-size: 4.5rem;
+                    }
+                }
+            }
+
+        }
+
+        /* 标题部分 */
+
+        > tit {
+            color: #fff;
+
+            h6 {
+                color: #f5f5f5;
+            }
+
+            > * {
+                /* 标题渐变色 */
+                background: linear-gradient(to right, #7F7FD5, #86A8E7, #7dd6d0) !important;
+                max-width: none;
+            }
+        }
+
+        /* 全部内容部分 */
+
+        .loads {
+            > * {
+                /* 全局控件最大大小 */
+                max-width: 65rem;
+            }
+        }
+    }
+}
+
+#demonstrate {
+    > * {
+        /* 全局控件最大大小 */
+        max-width: 40rem;
+    }
+
+    color: white;
+
+    .subheader {
+        color: #fff;
+    }
+
+    > div {
+        background-color: #003bd2;
+
+        .icon img {
+            border: 3px solid white;
+        }
+    }
+}
+
+#users {
+    > * {
+        background-color: #0a0a0a;
+        color: white;
+
+        a {
+            color: #b9ccff;
+            text-decoration: underline;
+        }
+
+        .code-block {
+            border-color: #d7ecfa;
+            background-color: #323232;
+            color: white;
+        }
+    }
+}

@@ -9,17 +9,58 @@ let tool = require('./tool');
 let Aout_Blogs = class Aout_Blogs {
     /** 单页内容量
      *
+     * 默认参数
+     *
      * @type number
      */
     static itemnum = 5;
-    /** 展示在数据中的字段 */
-    static showfield = {page: true, index: true};
+    /** 展示在数据中的字段
+     *
+     * 默认参数
+     *
+     * <pre>
+     * {
+     *   page: boolean, // 是否展示页码
+     *   index: boolean // 是否展示索引
+     * }
+     * </pre>
+     *
+     * @type {{
+     *  page: boolean,
+     *  index: boolean
+     * }}
+     */
+    static showfield = {
+        /** 是否展示页码
+         *
+         * @type boolean
+         */
+        page: true,
+        /** 是否展示索引
+         *
+         * @type boolean
+         */
+        index: true
+    };
 
     /**
+     * <pre>
+     * {
+     *   itemnum: number, // 单页内容量
+     *   showfield: { // 展示在数据中的字段
+     *     page: boolean, // 是否展示页码
+     *     index: boolean // 是否展示索引
+     *   }
+     * }
+     * </pre>
+     *
      * @param {{
-     * itemnum:number,
-     * showfield:{page:boolean,index:boolean}
-     * }} option
+     *  itemnum:number,
+     *  showfield:{page:boolean,index:boolean}
+     * }} option 初始配置
+     *
+     * @see Aout_Blogs.showfield
+     * @see Aout_Blogs.itemnum
      */
     constructor(option = {}) {
         option.itemnum && (Aout_Blogs.itemnum = option.itemnum);

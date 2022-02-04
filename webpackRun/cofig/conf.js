@@ -70,6 +70,6 @@ global.Conf = {
          *
          * @type string
          */
-        contentBase: './build'
+        contentBase: './build/fybug'
     }
 };

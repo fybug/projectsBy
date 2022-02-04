@@ -1,8 +1,23 @@
 /** aout.blogs 辅助工具 */
 let Tool = {
-    /** 扫描路径
+    /** 扫描 md 文件并解析
      *
-     * @return 按照页面名称分开的数据
+     * 按照页面文件夹分类存放
+     *
+     * @return {{}} 按照页面名称分开的 md 文件数据
+     * <pre>
+     * {
+     *    [页面名称]: [ // 数据列表
+     *       { // 一个 md 文件的数据
+     *         [字段名称]: string, // 字段内容
+     *         date: number, // 指定的日期毫秒数，无输入时使用当前时间
+     *         des?: string // 描述，如果有此字段则会对其进行 markdown 解析，返回 html
+     *         __cont: string // 内容数据，已经被进行 markdown 解析，返回 html
+     *       },
+     *    ]
+     * }
+     * </pre>
+     * @see Date.getTime
      */
     __scann: (compilation) => {
         let jsonlist = {};
@@ -15,6 +30,7 @@ let Tool = {
             let cont = "";
             // 头数据
             let header = ((da) => {
+                // 除去头数据后的内容
                 cont = da[1];
                 return da[0];
             })(Tool.__pass_header(data));
@@ -24,14 +40,15 @@ let Tool = {
             // 没数据
             if (header.length === 0 && cont === "") return;
 
-            // 插入内容数据
+            // 记录内容数据
             header.__cont = cont;
 
-            // 页面名称
+            // 页面名称，通过获取文件夹名称设置
             let pagename = path.basename(path.resolve(v, "../../../"));
 
-            // 不同页面的数据按照 页面名称 分开
+            // 不同页面目录下的的 md 文件数据数据按照 页面名称 分开
             jsonlist[pagename] || (jsonlist[pagename] = []);
+            // 追加数据
             jsonlist[pagename].push(header);
         });
         return jsonlist;
@@ -42,18 +59,33 @@ let Tool = {
      * @param {string} data
      *
      * @return {[{},string]} 返回解析后的头数据和去除头数据后的内容
+     * <pre>
+     * [
+     *    { // 实际输入的头数据
+     *       [字段名称]: string, // 字段内容
+     *       date: number, // 指定的日期毫秒数，无输入时使用当前时间
+     *       des?: string // 描述，如果有此字段则会对其进行 markdown 解析，返回 html
+     *    },
+     *    string // 去除头数据后的剩余内容
+     * ]
+     * </pre>
+     * @see Date.getTime
      */
     __pass_header: (data) => {
-        // 数据头检查
-        if (!data.startsWith("++++++")) return [{}, data];
+        /* 数据头检查 */
+        if (!data.startsWith("++++++"))
+            // 头标签不符，不处理，直接返回
+            return [{}, data];
 
         /* 数据尾检查 */
         let endmark = data.indexOf("++++++", 6);
-        if (endmark === -1) return [{}, data];
+        if (endmark === -1)
+            // 尾标签不符，不处理，直接返回
+            return [{}, data];
 
-        // 截取的数据头
+        // 截取头数据
         let head = data.substring(6, endmark).trim();
-        // 取出数据头后的内容
+        // 剩余的内容
         data = data.substring(endmark + 6).trim();
 
         // 头数据
@@ -61,8 +93,11 @@ let Tool = {
 
         // 逐行解析数据
         head.split(/\r?\n/).forEach(v => {
+            // 截取检查字段分割符
             let keys = v.indexOf(':');
+            // 无效字段直接忽略
             if (keys === -1) return;
+            // 解析数据并放入头数据数组
             header[v.substring(0, keys).trim()] = v.substring(keys + 1).trim();
         });
 
