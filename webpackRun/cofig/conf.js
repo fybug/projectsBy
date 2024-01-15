@@ -52,8 +52,8 @@ global.Conf = {
     /** 开发者模式下的专属配置 */
     devtool: {
         /** 测试状态模块输出名称 */
-        jsOut: {outName: 'script/[name][hash:9][id].js'},
-        cssOut: {outName: 'style/[name][hash:9][id].css'},
+        jsOut: {outName: './script/[name][hash:9][id].js'},
+        cssOut: {outName: './style/[name][hash:9][id].css'},
         imgOut: {urlOf: "/"},
 
         /** 测试服务器端口
@@ -70,6 +70,6 @@ global.Conf = {
          *
          * @type string
          */
-        contentBase: './build/fybug'
+        contentBase: './build'
     }
 };
