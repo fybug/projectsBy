@@ -1,1 +1,1 @@
-[{"title":"vhannels","date":"2020-12-1 12:23:00 ├F10: PM┤","des":"<p>轻量级 web 前端复合组件库</p>\n","label":"success:完整项目 √","link":"./vhannels.html","icon":"./static/pic/vhannels.png","page":"main"}]
+[{"title":"vhannels","date":"2020/12/1 12:23:00","des":"<p>轻量级 web 前端复合组件库</p>\n","label":"success:完整项目 √","link":"./vhannels.html","icon":"./static/pic/vhannels.png","page":"main"}]
